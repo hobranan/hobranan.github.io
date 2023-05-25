@@ -39,6 +39,11 @@ div.center {
 	text-align: center;
   }
 
+  /* Added to fill video size both on desktop adn mobile viewer */
+  video {
+    object-fit: fill;
+}
+
 html,
 body,
 div,
