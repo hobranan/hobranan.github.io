@@ -1,6 +1,6 @@
 # flukeupwebpage
 
-url: https://hobranan.github.io/websitefolder3_54hedrt657s2hge_flukeup1/flukeupwebpage/
+url: https://hobranan.github.io/
 
 theme: html5 up - Arcana
 theme download url: https://html5up.net/ ; https://html5up.net/arcana
