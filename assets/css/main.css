@@ -37,11 +37,12 @@
 /* Added to center the mp4 video inputs */
 div.center {
 	text-align: center;
-  }
+}
 
-  /* Added to fill video size both on desktop adn mobile viewer */
-  video {
-    object-fit: fill;
+/* Added to fill video size both on desktop adn mobile viewer */
+video {
+	width: 100%;
+	object-fit: contain;/* use "cover" to avoid distortion, or "fill" */
 }
 
 html,
@@ -400,7 +401,7 @@ blockquote {
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	align-items: stretch;
-	
+
 }
 
 .row>* {
