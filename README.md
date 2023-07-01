@@ -1,4 +1,4 @@
-# flukeupwebpage
+# GitHub Pages website
 
 url: https://hobranan.github.io/
 
