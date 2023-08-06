@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Testing NRF24L01 Radio Module Communications - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Testing NRF24L01 Radio Module Communications</h2>
+							<p>TAGS: electronics; software; Arduino nano; NRF24L01 radio module </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I love the ‘magic’ of remote communications (i.e. being able to control items from long
+							wireless distances).
+							I wanted to test out some widely popular radio communication modules known as the NRF24L01
+							(I specifically have the longer-range PA/LNA ones, but the wiring and coding techniques are
+							the same as the original).
+							NRF24L01 modules operate under the widely popular 2.4GHz unlicensed radio band.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\NRF-Arduino-Testing\NRF-Arduino-Testing_1.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Sender and receiver nanos with NRF radios;<br>The sender included a potentiometer for
+									manual
+									mode
+									change, but it was reprogrammed to do mode chnages automatically after 1 second;<br>
+									The
+									receiver included an LCD display, a Red-Green-Blue led, and a 9V battery for
+									portability.
+								</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> 2x Arduino microcontrollers (nano); 2x NRF24L01 (PA/LNA) modules; 1602 LCD
+							display; RGB led; 2x 9V batteries; potentiometer</p>
+
+						<p>Following the directions of some Arduino script examples I found on Instructables.com, I
+							setup a code
+							script to allow a
+							potentiometer to change the colour of an RGB led and display the state on a 1602 LCD
+							display. The idea was that I could put the potentiometer on one setup of nano and radio,
+							then put a
+							RBG led and display on the other setup of nano and radio, then tune the led colour from a
+							distance.<br>
+
+							It worked well enough; I was able to control the color easily from 60 feet (18 meters) away,
+							but I wanted to see how far I could get before losing control. I changed the programming of
+							the sender setup to be from using a manual potentiometer to instead having an automatic
+							incrementor that will change the led state every second, that way I can walk with the
+							reciever away
+							from my place and see how far I can go before noticing the led won't change.
+
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\NRF-Arduino-Testing\NRF-Arduino-Testing_0.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>I tried setting up the sender nano to a high point, near a window, to reasonably
+									maximize the
+									sending signal.</i>
+							</p>
+						</div>
+
+						<div class="center">
+							<video autoplay loop muted playsinline>
+								<source src="articleAssets\NRF-Arduino-Testing\NRF-Arduino-Testing_16.mp4"
+									type="video/mp4">
+							</video>
+							<p><i>Well-functioning NRF receiver; it cycles lights (and mode numbers) without skipping
+									because it
+									is within range of transmitter.</i>
+							</p>
+						</div>
+
+						<div class="center">
+							<video autoplay loop muted playsinline>
+								<source src="articleAssets\NRF-Arduino-Testing\NRF-Arduino-Testing_18.mp4"
+									type="video/mp4">
+							</video>
+							<p><i>Poor-functioning NRF receiver; it skips mode lights/numbers because it is just on the
+									edge of
+									the transmitter's range.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>But what’s its real potential?</b> I was able to stay connected up to about 250 feet (76
+						meters) away in a congested neighbour of houses and garages, but I read that it could
+						potentially stay connected at about 3600 feet (1100 meters), so I would love to take it to a
+						long open field or mountain and test the range; maybe use it on drone/plane project.
+						</p>
+
+						<h3>References</h3>
+						<p>NRF24L01 tutorial:
+							https://www.instructables.com/NRF24L01-Tutorial-Arduino-Wireless-Communication/
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

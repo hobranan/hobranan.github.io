@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Hosting a Website From My Own Raspberry Pi Using Nginx - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Hosting a Website From My Own Raspberry Pi Using Nginx</h2>
+							<p>TAGS: electronics; software; website; Raspberry Pi; Nginx server; </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>I had a cheap Raspberry Pi 3B and learned they were capable of hosting web servers. I was
+							learning more about web servers and figured this would be a good pi project; additionally, I
+							figured this project might teach me more about the intricacies of non-cloud web servers.<br>
+
+							Cloud based web servers aren’t free (for the most part; you can get an exception to this by
+							using GitHub Pages, but apparently the level of service is limited); the costs arise from
+							the power and service time allocated from companies to have their computers serve the cloud
+							requests (think of it like charging for virtual parking and virtual valets of your website
+							or other internet services). To get around this (at least at the individual tinkerers’
+							level) you can host your own website on your own hardware.
+
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-Raspberry-Pi\website-raspi-nginx_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Simple and free (if you have a spare Pi), but is it safe?.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Raspberry Pi 3B; html template packaged files (free from Html5up); optional
+							domain name (for $13/year from Namecheap, or $6/year with first time buyer’s coupon); Nginx
+							server software</p>
+
+						<p>I had to follow quite a few different tutorials to get a website working (see references
+							below), but basically:<br>
+							- I installed a Raspberry Pi OS on my pi, added login credentials, turned on SSH, and
+							accessed the pi (through either plugged keyboard and monitor, or, via SSH through VSCode
+							editor).<br>
+							- I installed Nginx via shell ‘sudo apt install’, then started the service.<br>
+							- I uploaded some test html files (from HTML5UP) to the nginx html host folders.<br>
+							- I setup free SSL connection using a Let's Encrypt plugin.
+							- I set my router to forward ports to allow http and https connections (and I also have a
+							domain name from Namecheap that I used to act as my website name instead of my public IP
+							address).
+
+						</p>
+
+						<!-- <div class="center"> -->
+						<!-- <video autoplay loop muted playsinline width="900" height="450"> -->
+						<!-- <video autoplay loop muted playsinline> -->
+						<!-- <source src="images/vid_gardenherbsvegs.mp4" type="video/mp4"> -->
+						<!-- </video> -->
+						<!-- </div> -->
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-Raspberry-Pi\website-raspi-nginx_2.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>This fireship.io tutorial was the starter tutorial for me, but it spread to
+									others.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Good, albeit limited performance.</b> If you expect to use this server only for low traffic
+						projects, then this Pi hardware is fine, but fi you expect to host your fast-growing web store
+						form it then I would use a cloud service or dedicate a faster processing computer.
+						<b>Beware of power outages.</b> If the server is needed for intermittent usage, then Pi is fine
+						alone, but if its need for a constant service, like 24/7 data tracker or controller, then you
+						might need to install some sort of uninterrupted power supply.
+						<b>Exposed?</b> In order to keep this server public, I had to open my ports; I have a domain
+						name to
+						use instead of an IP address, but anyone can easily find out what that IP is with IP look ups.
+						Apparently, this is not a very secure method as I’m more exposed to hacker attacks (if they can
+						target my server with program vulnerability packets). A way to increase security is to hide my
+						IP by using a proxy service like Cloudflare (this way when people look for my IP they get
+						Cloudflare’s instead), and, to use intermediate server tunneling agents, as installed programs, on my
+						server’s computer so I don’t have to expose any ports (like installing Cloudflare Zero Trust,
+						Astrorelay, etc. so my pi is talking to cloud flares server which then talks to the open world,
+						without my IP and port configurations).
+						</p>
+
+						<h3>References</h3>
+						<p>References:
+							Raspberry Pi website hosting tutorial from fireship.io:
+							https://fireship.io/lessons/host-website-raspberry-pi/ <br>
+							HTML5UP.net free website themes: https://html5up.net/ <br>
+							Namecheap cheap domain name leasing: https://www.namecheap.com/ <br>
+							Ting Wei’s tutorial: https://blog.tingwei.fans/self-hosted-website-on-a-raspberry-pi-part-1
+							<br>
+							Raid Owl’s Cloudflare tunneling tutorial:
+							https://www.youtube.com/watch?v=hrwoKO7LMzk&ab_channel=RaidOwl <br>
+							PiMyLifeUp’s tutorial: https://pimylifeup.com/raspberry-pi-nginx/
+
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

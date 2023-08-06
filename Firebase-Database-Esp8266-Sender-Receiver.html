@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Testing A Firebase Realtime Database with Two ESP8266 Microcontrollers - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Testing A Firebase Realtime Database with Two ESP8266 Microcontrollers</h2>
+							<p>TAGS: electronics; software; Firebase database; ESP8266; Arduino; BME280 </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I wanted to see how well internet connected microcontrollers could work with the simple and
+							powerful Google Firebase.<br>
+
+							I’ve used Firebase before but never with microcontrollers and it could be a great candidate
+							for simplifying data servers with Arduino devices.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Firebase-Database-Esp8266-Sender-Receiver\Firebase-Database-Esp8266_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Two Esp8266s with 9V batteries. One has the BME 280 sensor. The other has an OLED
+									display.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Arduino compatible WIFI microcontroller (Espressif Esp8266); Firebase library;
+							Firebase account; OLED display; BME280 (Temperature, Humidity) sensor</p>
+
+						<p>I followed the tutorial from RandomNerdTutorials since it was quite detailed and easy to
+							understand (I recommend it). I used two esp8266s to test the Firebase:<br>
+							One I hooked up a BME280 (Temperature Humidity) sensor to provide data,<br>and the other I
+							hooked up a 128x64 pixel OLED display to read from the database.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Firebase-Database-Esp8266-Sender-Receiver\Firebase-Database-Esp8266_3.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A view of the Firebase database from its webpage.</i>
+							</p>
+						</div>
+						<span class="image featured"><img
+								src="articleAssets\Firebase-Database-Esp8266-Sender-Receiver\Firebase-Database-Esp8266_2.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A zoomed in view of the OLED displaying the four BME values it retrieved from
+									Firebase.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Pretty good. </b>It is simple and it works well; I might have to use Firebase more often for
+						any Arduino database projects.
+						</p>
+
+						<h3>References</h3>
+						<p>RandomNerdTutorials tutorial:
+							https://randomnerdtutorials.com/esp8266-nodemcu-firebase-realtime-database/
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Using An Esp8266 And Cayenne As An IOT Sensor Monitor - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Using An Esp8266 And Cayenne As An IOT Sensor Monitor</h2>
+							<p>TAGS: electronics; software; Esp8266; Arduino; WIFI Web Server; Cayenne </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I wanted to test a free IOT server service that allows me to monitor my microcontroller
+							sensors from the web (from my smartphone). Cayenne (powered by myDevices) allows a user to
+							add arduinos, esp devices, and raspberry pis to its server so you can monitor whatever
+							sensors you attached to them from their website.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\IOT-Esp8266-Sensor-Monitor-Cayenne\cayenne-iot_0.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Cayenne's free IOT MQQT service.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Esp8266 microcontroller; BME280 sensor;</p>
+
+						<p> After creating a free Cayenne account, website had simple enough directions to follow when
+							setting a new microcontroller setup; there is an installable library package that has code
+							examples you can modify. They basically consist of authentication keys (grabbed from your
+							free Cayenne website account), and library’s class objects to interact with your sensor
+							data. I added a BME280 (Temperature/ Humidity/ Pressure/ Altitude module) to the Esp8266,
+							then sent
+							those to the Cayenne server via “Cayenne.virtualWrite” commands.
+						</p>
+
+
+						<span class="image featured"><img
+								src="articleAssets\IOT-Esp8266-Sensor-Monitor-Cayenne\cayenne-iot_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Webpage display of sensor data.</i>
+							</p>
+						</div>
+
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>It works ok, but has flaws.</b> One of the intentions of this was to easily
+						see the sensor data from my phone; it does this but there’s an issue with displaying all the
+						data. It seems that either my phone or their website settings will block the view of some of my
+						sensor data, making it impossible to view, and, as far as I could tell, they don’t have a
+						smartphone app. Also, I was having issues trying to recall historical chart data from the
+						website. Aside from those issues, it seems to work ok.
+						</p>
+
+						<h3>References</h3>
+						<p>Cayenne IOT service: https://developers.mydevices.com/cayenne/features/ <br>
+							BME 280 sensor: https://lastminuteengineers.com/bme280-arduino-tutorial/
+
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Testing LoRa Communication Using My TTGO LoRa ESP32 Microcontrollers, Smartphones, And The Meshtastic App -
+		Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Testing LoRa Communication Using My TTGO LoRa ESP32 Microcontrollers, Smartphones, And
+								The Meshtastic App</h2>
+							<p>TAGS: electronics; nature projects; TTGO Esp32 LoRa; Meshtastic app; smartphone;
+								Bluetooth; </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							Wanted to experience the impressive long-range (LoRa) abilities of the TTGO esp32 LoRa
+							technology.
+							I figured a perfect use for pair of these is a messaging network that doesn’t use cellular
+							nor WAN-wifi service
+							(like if I’m hiking in deep woods); I would program the LoRa esps to each pair with separate
+							smartphones
+							(via wifi access points or Bluetooth), then use the LoRas to communicate with each other
+							over long distance;
+							The smartphones could then send messages to each other through their LoRa counterparts. <br>
+							But… it turns out someone already made that!<br>
+							The Meshtastic project is an open-source project design to build mesh communication networks
+							using low powered devices.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\ESP32-LoRa-Meshtastic\LoRa-Meshtastic_1.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>A single user setup (of LoRa controller, smartphone, and battery pack for the LoRa)
+									which we shall designate as "Me1" or "1".<br>This user communicates with another
+									user called "Me2" or "2" on the
+									same channel feed. </i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> 2x TTGO esp32 LoRa; 2x smartphone (with Meshtastic app and Bluetooth); 2x
+							batteries</p>
+						<p>Following the directions of the Meshtastic webpage: I installed the USB to esp32 drivers (for
+							allowing the
+							computer to talk to the devices), then installed the Meshtastic firmware to the
+							microcontrollers, via computer.
+							I then installed the android version of the Meshtastic app to both of my smartphones (via
+							Android Play Store).
+							Then I paired a smartphone to an esp32 device (via the app’s Bluetooth connection software)
+							and repeated for
+							the other esp and smartphone. After changing the settings to be on the US band (which is
+							915MHz; my model),
+							and changing device recognition names, I was able to get both pairs of systems to talk to
+							each other. Success!
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\ESP32-LoRa-Meshtastic\LoRa-Meshtastic_2.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>This second user "Me2" or "2" has a similar separate LoRa setup, and is replying to
+									the first user.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>How well does it perform?</b> It works but I have yet to test the distance it can work from.
+						I will need to update this article when I go climbs some mountains. <br>
+						<b>Nice compartment needed.</b> I used an old 3d printed casing for each device, but they aren’t
+						good enough; I need one ready for nature’s elements.<br>
+						<b>Good app, but it could be more.</b> LoRa is known for its long-distance information transfer,
+						but I believe it lacks in bandwidth (can only do small data packets); nevertheless, if it was
+						programmed, I believe it could send small data voice messages instead of being limited to just
+						text messages. Could be a good potential update for the app (or building my own version of the app).
+						</p>
+
+						<h3>References</h3>
+						<p>Meshtastic project: https://meshtastic.org/docs/introduction <br>
+							TTGO LoRa esp32 devices:
+							https://www.aliexpress.com/item/32996759721.html
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

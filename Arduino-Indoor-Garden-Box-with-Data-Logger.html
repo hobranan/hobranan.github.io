@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Arduino Indoor Garden Box with Data Logger - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Arduino Indoor Garden Box with Data Logger</h2>
+							<p>TAGS: electronics; software; nature projects; Arduino Uno; data logger shield; real time
+								clock; relay; water pump; DC motor fan; </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							One of my passions is with nature related automation (because I like growing food plants and
+							I love the idea of them being cared for through automation).
+							Normally I can achieve this with minimal equipment (like a bubbler alone), but I have an
+							Arduino, lots of sensors, and data logger shield; and, as an engineer,
+							I figured this would be a perfect project for testing all of this equipment.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_40.jpg"
+								alt=""  /></span>
+						<div class="center">
+							<p><i>Arduino sensor system with data logger for a hydroponics planter. The black thing on
+									the right is a constant air bubbler that is not part of the Arduino system.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Arduino microcontroller (Uno); data logger shield; real time clock; 2 relays;
+							low voltage water pump;
+							low voltage DC motor fan; water level sensor; photoresistor; temperature resistor; 1602 LCD
+							display; BME280</p>
+
+						<p>The main two goals of this Arduino project are to make a system that controls relays and
+							sensors, and, to do data logging of said sensors.<br>
+
+							Basically, I installed the data logger shield (which includes a built-in real-time clock and
+							requires an SD card and watch battery) on top of the Arduino Uno.
+							I then wired the fan, pump, LCD, and sensors to the appropriate digital and analog ports on
+							the Arduino.
+							I uploaded some basic Arduino code used for: turning on the relay controls for the fan and
+							pumps, capturing sensor
+							data through the LCD, and recording the data on the SD card.<br>
+
+							My system was setup to record the temperature, barometric pressure, humidity, altitude,
+							water level (and analog value),
+							analog light value (photoresistor), analog temperature value (not seen on LCD), and time
+							(not seen on LCD). The BME280 sensor produces
+							digital readings of temperature, barometric pressure, humidity, and altitude.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_0.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>System can display current values on 16x2 LCD.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_4.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;"/></span>
+						<div class="center">
+							<p><i>System of 1602 LCD display, arduino, logger, relays, BME280, and 9V battery.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_5.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The arduino data logger shield includes prototype grids for adding new compenents; I
+									added more 5V and ground terminals.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_6.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;"/></span>
+						<div class="center">
+							<p><i>The arduino data logger shield also includes a place for the SD card, real-time clock,
+									and uninterrupted supply battery for clock.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_9.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;"/></span>
+						<div class="center">
+							<p><i>The system includes a 5V water pump for watering plants from above the container<br>
+									(I put another white model in the picture to show what it looks like).</i>
+							</p>
+						</div>
+
+						<div class="center">
+							<video height="1000" width="550" autoplay loop muted playsinline>
+								<source
+									src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_10.mp4"
+									type="video/mp4">
+							</video>
+							<p><i>Relay and water pump in action.</i>
+							</p>
+						</div>
+
+						<div class="center">
+							<video height="1000" width="550"  autoplay loop muted playsinline>
+								<source
+									src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_11.mp4"
+									type="video/mp4">
+							</video>
+							<p><i>I added a 5V fan to blow away stagnant air from the roots (to prevent mold).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_19.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A water level sensor to track the container's water height.</i>
+							</p>
+						</div>
+
+						<div class="center">
+							<video height="1000" width="550"  autoplay loop muted playsinline>
+								<source
+									src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_20.mp4"
+									type="video/mp4">
+							</video>
+							<p><i>The system will light a red LED as an alarm indication for low water level (below
+									15%).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_24.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>I made a small 3D printed block in a previous project, for holding analog
+									photoresistors and temperature sensors.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_25.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Here the photoresistor is displaying a normally high value for been in the presence of
+									light.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_26.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Here the photoresistor is displaying a zero value while being within a dark cardboard
+									box.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_41.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Here is a sample of the CSV data captured from the system, displayed on an excel
+									sheet.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_42.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Here is a sample of the CSV data plotted to a chart. Notice the overnight drops in
+									photoresistor and temperature values.</i>
+							</p>
+						</div>
+
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Bird’s nest on a wire.</b> If I were to professionally build this I would tie down the bundle
+						of wires better and place the system in an electronics compartment/box.<br>
+						<b>Data Logger for Uno only.</b> I had a heck of a time trying to get this logger to work with
+						an Arduino Mega but turns out that it just wasn’t natively compatible to work with (at least not
+						that I knew of), it seemed to only work with the Uno model.<br>
+						<b>9V batteries are handy.</b> I only have the water pump and wind fan on for like a minute at a
+						time, so this was acceptable to be powered by a 9V battery (both motors could handle that
+						voltage, and the
+						drainage from the battery at set intervals was minor).<br>
+						<b>Works pretty decently, but unnecessary for me.</b> As mentioned before, I don’t need this
+						system for my garden boxes (they are fine with just the bubblers), I just wanted to test this
+						project just to get the experience from trying out the data logger and sensors. They work pretty
+						well.
+						</p>
+
+						<h3>References</h3>
+						<p>Data Logger and RTC tutorial:
+							https://learn.adafruit.com/adafruit-data-logger-shield/using-the-real-time-clock <br>
+							Photoresistor and temperature resistor tutorial:
+							https://github.com/adafruit/Light-and-Temp-logger/blob/master/lighttemplogger.ino <br>
+							BME280 Temperature, humidity, and barometric pressure sensor tutorial:
+							https://lastminuteengineers.com/bme280-arduino-tutorial/ <br>
+							Soil capacitive moisture sensor tutorial:
+							https://how2electronics.com/interface-capacitive-soil-moisture-sensor-arduino/ <br>
+							Liquid level sensor tutorial:
+							https://lastminuteengineers.com/water-level-sensor-arduino-tutorial/
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

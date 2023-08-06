@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Experimenting With My Cheap Garden Irrigation System - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Experimenting With My Cheap Garden Irrigation System</h2>
+							<p>TAGS: electronics; software; nature projects; esp8266; arduino; relays; water solenoids;
+								irrigation </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I have a garden, old irrigation supplies, rain collection barrels, and wanted to see if I
+							could apply my computer skills into creating an automated watering system.<br>
+							I am hoping this system might develop to be an acceptable system for watering my plants if
+							I'm away for like a week.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_5.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>The four-valve water solenoid; setup for supplying potentially 4 garden areas with
+									rain barrel water.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> esp8266; 4 channel relay; 1 channel relay; 12V water solenoids;
+							45W 120V water fountain pump; water hoses and spouts; various-leveled power supplies and
+							wiring; rain barrels</p>
+
+						<p>For an initial evaluation setup, I wanted to create a system where my water pump would supply
+							collected rainwater to up-to
+							4 garden bed areas using an esp microcontroller controlling the solenoid valves at timed
+							intervals. I installed old water
+							hoses in three of the bed areas and connected them to the solenoids using tie-straps (since
+							I didn’t have reducers);
+							strung the supply hose to the water pump sitting in a rain barrel; wired 18awg wire to the
+							12V solenoids and relays;
+							cut and tied an extension cord to the single 120V relay; wired the 5V and 12V supply
+							adapters; then wired the 5V signal wires to the esp controller.
+							I programmed the esp (using Arduino IDE) to open the solenoids, one at a time, for 5 minutes
+							each, then observed the irrigation performance.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_1.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Electronics layout: Esp8266 microcontroller, 4-channel relay for the 12V solenoid,
+									<br>
+									1-channel relay for the water pump, Blue extension cord for supplying all power,
+									White USB plug for 5V power,<br>
+									Black adapter for 12V power, and Yellow extension cord for supplying power to the
+									water pump. </i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_4.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Water hose supplying the 12V 4-way solenoid; I laid it on some plant bags to absorb
+									any potential water leakages. A black 1/4 inch line also supplies these bags
+									(Watering Area #1).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_5.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Close up of solenoid; wiring terminals are soldered and color coded with heat
+									shrink.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_7.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Water pump inside rain barrel.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_2.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Watering Area #2, strung with old hose that has drip spouts strewed along it.<br> The
+									dark water spots can give you an idea of the trial performance of this setup.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_3.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Watering Area #3, also strung with old hose.<br> Spout coverage is slightly better
+									here than #2, but I'm currently not growing anything, just testing.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Garden-Irrigation-System\Garden-Irrigation_6.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Close up of a soil moisture sensor; it is normally covered from the rain using an old
+									tupperware.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Go Pro.</b> I wanted to see how the system would work with what spare parts I already had
+						(aside from the $30 12V 4 channel solenoid I bought). The system works, but only ok in some
+						areas; the flow is not very high, and the hoses need more positioned spouts. The wires should be
+						up to code specs (the current wires are ok for supervised usage, but I’m not comfortable leaving
+						it run alone), and could probably benefit from some fuses. The rain coverings are just old
+						tupperware
+						containers, so, I could 3D print some properly fitted ABS containers. <br>
+						<b>It plugs too easily.</b> The rain barrel seems to collect silt and grow algae and that gets
+						sucked into the pump, and the solenoid piece has a fine mesh screen to hold back junk so as to
+						retain better seating of the valves; that screen plugs very quickly if the barrel experiences
+						any
+						turbulence. I wonder if I could 3D print an inline filter to help that mesh perform longer? <br>
+						<b>Easier monitoring wanted.</b> Right now, the code is just simple relay timer scripts, but it
+						would be nice to add this system to an online server where I could program schedules; maybe I
+						will program that manually or find an MQTT service that can do that.
+						</p>
+
+						<h3>References</h3>
+						<p>4-valve water solenoid on Amazon: https://www.amazon.ca/dp/B085DTGWBM</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

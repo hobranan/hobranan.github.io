@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Building a Simple Website Server from an ESP8226 - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Building a Simple Website Server from an ESP8226</h2>
+							<p>TAGS: electronics; software; website; webserver; ESP8266; Arduino </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I wanted to see if I could monitor and control a small microcontroller from a privately
+							owned web server and website that is hosted on that same microcontroller.<br>
+
+							One of the beauties of having Wi-Fi on a tiny microcontroller is that you can monitor and
+							control the sensors from a separate smartphone or computer display (so no need to hook up an
+							LCD, and you get to view the information remotely). Another cool thing is that some smart
+							developers created libraries for the Arduino/Esp compatible microcontrollers that allow a
+							person to host html code so you can view it from the web.
+
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-ESP8266\website-esp8266_3.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>My BME280 sensor attached to an ESP8266 Wifi
+									microcontroller.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> esp8266; BME280</p>
+
+						<p>I just wanted to test something actively produced from the website, so I hooked up a BME280
+							(Temperature / Humidity / Baro Pressure / Altitude sensor) to the controller and had it
+							constantly updated the website with its readings. The Random Nerd Tutorials website had a
+							very detailed example on how to do this. Basically, I had to install the BME280, and link
+							webserver related libraries on Arduino IDE to an example sketch that included both functions
+							and html code. Then upload to the board, and open the local IP on my browser.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-ESP8266\website-esp8266_2.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>Random Nerd Tutorials is a great resource for learning about web server and ESP8266
+									setups.</i>
+							</p>
+						</div>
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-ESP8266\website-esp8266_1.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>A nice simple display of normalized temperatures, humidity, and pressure, on top.<br>
+									The bottom is when I breathed on it (and humidity rose).</i>
+							</p>
+						</div>
+
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Can it be expanded?</b> If I add an SD card module to the microcontroller, could I host a
+						high-quality website? I was also reading about file systems with Arduinos like SPIFFS and
+						LittleFS which seemed to treat the controller as a folder holder for files like html, picture,
+						js files (so I don’t have to hardcode them into the Arduino sketch).
+						<b>Public? No thanks.</b> I could set this up to be accessible from the public web by forwarding
+						my
+						ports to this device, but I’d rather use a safer method by going to a private service. Maybe
+						there is ESP software for doing that?
+						</p>
+
+						<h3>References</h3>
+						<p>RandomNerdTutorials tutorial:
+							https://randomnerdtutorials.com/esp8266-nodemcu-web-server-sent-events-sse/
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

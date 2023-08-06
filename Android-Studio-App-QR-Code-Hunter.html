@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Building An Android Studio App For QR Code Collecting - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Building An Android Studio App For QR Code Collecting</h2>
+							<p>TAGS: software; Android Studio; Android; smartphone; Google Firebase; Open Street Maps;
+								GitHub</p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>Some of my engineering courses taught me about some fundamental concepts of software
+							engineering (through an object-oriented style using the Java language); In doing this, I was
+							also guided on how to use Android Studio, a standard application for developing Android
+							based apps using the Java language.<br>
+
+							Here I will go over the application my team and I built called QR Hunter, an app for
+							translating any QR or bar codes you find with your smartphone camera.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_0.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Our app has five main features:<br> camera code capture; map navigation; code library
+									review; scoreboard review; and profile review.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Android Studio; Google Firebase; Open Street Maps; GitHub; Android smartphone
+						</p>
+
+						<p>For our course objectives we were tasked with building an app that basically acts a code
+							collection game where you can camera scan any QR/bar code to get uniquely generated
+							‘monsters’ with unique names, pictures, and point values (kind of like Pokemon Go); you can
+							compare/compete against other players to find the most QR codes, points, or highest code
+							values.<br>
+							When building the app our software requirements were to build functions that that allows a
+							user to:<br>
+							- create personal profiles (that I can autologin and log out);<br>
+							- see my profile and other’s profiles;<br>
+							- add QR and bar codes to that profile via camera;<br>
+							- see uniquely generated names, pictures, and points from adding those codes (they are
+							determined via inspecting the SHA-256 hash generated from the code’s text values);<br>
+							- see pins of other sighted codes on a graphic map (we used Open Street Maps API);<br>
+							- comment on yours and other’s codes;<br>
+							- search profile codes based on keywords and/or regions;<br>
+							- see the score rankings of mine and other’s codes;<br>
+							…add other functionality features!<br>
+							(If you want to see all the requirements, you can navigate to the GitHub wiki ‘User
+							Stories’: 
+							<a href="https://github.com/CMPUT301W23T03/IHuntWithJavalins/wiki/User-Stories" target="_blank">https://github.com/CMPUT301W23T03/IHuntWithJavalins/wiki/User-Stories</a> <br>
+							and to the ‘Storyboard’:
+							<a href="https://github.com/CMPUT301W23T03/IHuntWithJavalins/wiki/User-Interface-Mockups-and-Storyboard-Sequences#storyboard-use-case-sequence-diagrams" target="_blank">https://github.com/CMPUT301W23T03/IHuntWithJavalins/wiki/User-Interface-Mockups-and-Storyboard-Sequences#storyboard-use-case-sequence-diagrams</a>
+							)
+
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_11.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Here's an example item with a bar code.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_3.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The app can use the phone camera to scan the barcode<br> (I dont have it focused on
+									the bar code because it would have automatically switched the app view).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_4.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The is the generated monster with name, picture, and point value.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+							src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_1.jpg"
+							alt="" /></span>
+					<div class="center">
+						<p><i>A view of the Open Street Map to see nearby codes registered by others.</i>
+						</p>
+					</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_5.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A view of a user's code library with all they have collected.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_6.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A user can make comment's on their codes (for others, who have the same code, to
+									see).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_7.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>We can view everyone's scores/placings and the codes they collected.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_8.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The user has a dedicated profile page where they can view their own score
+									placings.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Android Studio is pretty cool.</b> I remember about a year before building this that I tried
+						to make an app with Android Studio (not knowing anything about Java) and it was too complicated
+						for me. Now, it’s actually quite a handy tool to use (and I find the Java language very
+						appetizing compared to the other main ones).<br>
+						<b>Google Firebase works great with Java!</b> This project was my introduction to using firebase
+						as a
+						database (for the profiles and saving any pictures). It is quite handy to use as the
+						documentation for setting up push and pull functions are very straightforward. If you know very
+						little about database and are going to do something with Java, then I recommend you try it.<br>
+						<b>Open Street Maps is a free alternative to Google’s.</b> Since we were on a team testing an
+						app that
+						could (if programmed incorrectly) make the mistake of constantly pulling map data, we didn’t
+						want to risk setting up a paid Google Maps account that would accidently run out of credits over
+						a short time. Instead, we used a free map API called Open Street Maps; that was slightly more
+						difficult to setup (because of the small amount of documentation) but it worked out in the end;
+						use this service if you have the same fear of cost.<br>
+						<b>It needs graphics that pop.</b> Even though I’m a fan of the app’s yellow and black color
+						scheme of
+						the app, it needs some more pop with the colors; it could be updated to be more like Pokemon
+						Go’s color palette (for example).<br><br>
+
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\firebase_1.jpg" alt="" /></span>
+						<div class="center">
+							<p><i>The layout of our firebase database's document hierarchy.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Android-Studio-App-QR-Code-Hunter\pokemon-go-169.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>An example view of Pokemon Go's color palette.</i>
+							</p>
+						</div>
+
+						<div class="center">
+							<video autoplay loop muted playsinline>
+								<source
+									src="articleAssets\Android-Studio-App-QR-Code-Hunter\RPReplay_Final1680734913.MOV"
+									type="video/mp4">
+							</video>
+							<p><i>This is an fantastic 'advertisement' video that my other teams members made to present
+									to
+									our teacher.</i>
+							</p>
+						</div>
+
+						<h3>References</h3>
+						<p>
+							GitHub project: https://github.com/CMPUT301W23T03/IHuntWithJavalins <br>
+							Android Studio: https://developer.android.com/studio <br>
+							Google Firebase: https://firebase.google.com/ <br>
+							Open Street Maps for Android Studio: https://github.com/osmdroid/osmdroid <br>
+							GitHub wiki ‘User Stories’:
+							https://github.com/CMPUT301W23T03/IHuntWithJavalins/wiki/User-Stories <br>
+							GitHub wiki ‘Storyboard’:
+							https://github.com/CMPUT301W23T03/IHuntWithJavalins/wiki/User-Interface-Mockups-and-Storyboard-Sequences#storyboard-use-case-sequence-diagrams
+							<br>
+							Pokemon Go: https://pokemongolive.com/
+
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

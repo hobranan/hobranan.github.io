@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Reflecting On Embedded Systems Concepts With Arduino And FreeRTOS - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Reflecting On Embedded Systems Concepts With Arduino And FreeRTOS</h2>
+							<p>TAGS: electronics; software; FreeRTOS; Arduino; nano; stepper motor; UART; </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							In one of my university’s courses, we learned about real-time embedded systems. Real-time
+							operating systems are systems that strive to complete tasks within hard time limits; these
+							can be both scheduled and interrupt triggered tasks. They are important systems because not
+							only do they express high performance with their ability to respond, but they are suitable
+							for mission or safety critical systems (like vehicle accident black boxes, aircraft systems,
+							medical devices).<br>
+
+							FreeRTOS is an example of a real-time operating system (it’s in the name). I learned that
+							you could import the FreeRTOS library on the Arduino IDE, so I wanted to reflect on the
+							concepts in learned in my course and how I could apply them to an Arduino project.<br>
+
+							The main concepts our course focused on were: multi-tasking/concurrency and priorities;
+							queue containers; UART and SPI communications; device control (motors with opto-isolator,
+							displays, buttons, leds); hardware interrupts and polling;
+
+						</p>
+						<span class="image featured"><img
+								src="articleAssets\Reflecting-On-Embedded-Systems-Concepts-With-FreeRTOS\Reflecting-Embedded-FreeRTOS_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A dual Arduino nano setup.<br>One with a button, LED array, OLED display, and acts as
+									UART
+									sender.<br>The other as another OLED display, the UART receiver, and steper motor
+									controller.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> 2x Arduino microcontroller (nano); FreeRTOS library; 2x OLED displays; 5x LEDs;
+							stepper motor (and ULN2003 driver)</p>
+
+						<p>I wanted to showcase as much of the concepts I listed above, so I made a scene where one
+							Arduino nano is holding a hardware button and 2 prioritized (but concurrently acting) tasks
+							that log and trigger a UART communication (to a second Arduino nano) when the button is
+							pressed. The first nano, when hitting the button, will increment the display with ‘number of
+							button presses’, and trigger a led array to light sequentially along the array (1 to 5,
+							after a second each); when the final led is lit, a second display number will increment the
+							‘UART counts’ and the UART communication signal will send to the other nano.<br><br>
+
+							The second Arduino will receive the UART communication to display on the OLED an increment
+							of the ‘UART counts' log and trigger a stepper motor’s rotation. After the stepper is done a
+							revolution, the display will increment the ‘number of stepper revolutions’.<br><br>
+
+							The first nano’s display will also show an incrementing fast counter to act as a ‘heartbeat
+							counter’.<br><br>
+
+							This dual nano scene performs:<br>
+							- multi-tasking/concurrency with the two tasks on the first Arduino that:<br>
+							Task 1: increment the heartbeat counter and handle displaying all OLED information;<br>
+							Task 2: handle the LED array animation and send UART communication to the other nano;<br>
+							- button triggering interrupts that increment a counter and trigger the led array.<br>
+							- UART communication (with the aforementioned second task).<br>
+							- stepper control from the second nano.<br><br>
+
+							The scene is missing concrete displays of:<br>
+							- task prioritizations (the ‘led array’ task is higher priority that the ‘OLED’ task, but
+							they don’t really show their realized use in this example scene).<br>
+							- queue containers (since I was passing single and int data between tasks and UART lines, it
+							isn’t the best example for me to use queues).<br>
+							- SPI communications (I was using I2C for displays and UART for Arduino comms but didn’t
+							find an appropriate example to use SPI).<br>
+							- polling (I didn’t have a good example of hardware attention checking).<br>
+							I can probably make another scene on a different article to showcase these missing features, but
+							for now I will use what I included.
+						</p>
+
+						<div class="center">
+							<video autoplay loop muted playsinline>
+								<source
+									src="articleAssets\Reflecting-On-Embedded-Systems-Concepts-With-FreeRTOS\Reflecting-Embedded-FreeRTOS_3.mp4"
+									type="video/mp4">
+							</video>
+							<p><i>- Button is pressed, triggering an interrupt that increment the first counter (Display
+									1, left number).<br><br>
+									- Increment causes another task (LED array) to animate; after completing, causes an
+									increment of another counter (Display 1, middle number) and trigger UART
+									communication to other Arduino.<br><br>
+									- Nano receives UART and increments another counter (Display 2, left
+									number).<br><br>
+									- Increment causes stepper motor to revolve; after completing, causes an increment
+									of another counter (Display 2, middle number).<br><br>
+									- First display has counter (Display 1, right number) that acts as a heartbeat, but
+									also displays concurrency is its increment isn't interrupted when the led array is
+									activated.
+								</i>
+							</p>
+						</div>
+
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Power of concurrency.</b> Arduino alone is great for hardware/peripheral
+						control/communication, and interrupts, but with adding FreeRTOS, you can make multiple tasks
+						seem to work at the same time; this helps improve the value of a cheap single board
+						microcontroller.
+						<b>Opto-mise it.</b> I had at first attempted to use an opt-isolator with the stepper motor, but
+						it
+						wasn’t receiving the input signals, so I hard wired the inputs between the nano and stepper.
+						This is bad practise as motors can induce back voltage through the signal lines that will fry
+						the board, but I was ok with risking it for a cheap nano for the sake of this demo.
+						</p>
+
+						<h3>References</h3>
+						<p>FreeRTOS website: https://www.freertos.org/index.html <br>
+							FreeRTOS on Arduino: https://www.arduino.cc/reference/en/libraries/freertos/ <br>
+							Arduino UART tutorial: https://docs.arduino.cc/learn/built-in-libraries/software-serial <br>
+							Stepper tutorial: https://www.arduino.cc/reference/en/libraries/stepper/ <br>
+							Robotics Back-End’s Arduino button interrupt tutorial:
+							https://roboticsbackend.com/arduino-interrupts/
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

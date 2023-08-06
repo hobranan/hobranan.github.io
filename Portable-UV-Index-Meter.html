@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Testing A Portable UV Index Meter - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Testing A Portable UV Index Meter</h2>
+							<p>TAGS: electronics; Software; Arduino; Nano; GUVA-S12SD UV Sensor </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>I bought the cheap GUVA-S12SD (Ultra Violet) UV sensor because I figured it could be a useful sensor for a
+							myriad
+							of solar projects (weather station; garden solar quality measurement; solar panel monitors;
+							UV research projects)
+							so I wanted to test out its measuring qualities with a simple portable meter.
+						</p>
+
+						<span class="image featured"><img src="articleAssets\Portable-UV-Index-Meter\Portable-UV_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Nano, 9V terminal, OLED display, and UV sensor.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Arduino microcontroller (nano); GUVA-S12SD UV sensor; OLED display; 9V battery
+						</p>
+
+						<p>I followed the directions of the Abid Hossain’s UV index meter tutorial to setup some basic
+							Arduino code for produce UV range values
+							(0-10 UV index). By combining all the parts I was able to produce the portable testable
+							product.
+						</p>
+
+						<span class="image featured"><img src="articleAssets\Portable-UV-Index-Meter\Portable-UV_2.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Readings in darkness.</i>
+							</p>
+						</div>
+						<span class="image featured"><img src="articleAssets\Portable-UV-Index-Meter\Portable-UV_3.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Readings in sunlight behind a window.</i>
+							</p>
+						</div>
+						<span class="image featured"><img src="articleAssets\Portable-UV-Index-Meter\Portable-UV_4.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Readings in direct sunlight.</i>
+							</p>
+						</div>
+
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>It works, enough said.</b> It works well and was easy to set up. I appreciate how the sensor
+						and code was set up without the need of a sensor specific library and only required a few lines
+						of math code (to convert the analog signal to a UV index value).<br>
+						<b>Compares with photoresistor?</b> This UV sensor works similarly to a photoresistor where it
+						produces an analog value corresponding to intensity, but they are different technologies; this
+						sensor captures the ‘240-370nm range of light which covers UVB and most of UVA spectrum’; the
+						photoresistor typically works within the visible light wavelength range (peaking near 540nm). I
+						wonder how they would fare side by side in supplementing a solar system with useful data or
+						control?
+						</p>
+
+						<h3>References</h3>
+						<p>GUVA-S12SD UV sensor purchase website:
+							https://thepihut.com/products/adafruit-analog-uv-light-sensor-breakout-guva-s12sd <br>
+							Abid Hossain’s UV index meter tutorial:
+							https://www.hackster.io/abid_hossain/arduino-uv-index-meter-f03b4e <br>
+							0.91in OLED display tutorial:
+							https://www.aranacorp.com/en/using-a-0-91in-oled-display-with-arduino/ <br>
+							GM55 photoresistor data sheet: https://www.sparkinter.com/pdf/120300-0056590.pdf
+
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

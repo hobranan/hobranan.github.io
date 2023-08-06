@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Building a Cheap Website for Free (or $13 a Year), using GitHub Pages, Namecheap, Html5up, and Unsplash -
+		Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Building a Cheap Website for Free (or $13 a Year), using GitHub Pages, Namecheap,
+								Html5up, and Unsplash</h2>
+							<p>TAGS: software; website; GitHub Pages; Namecheap; Html5up; Unsplash </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>I wanted to understand more about the basics of building and hosting a website; this
+							included: html files that are the bones of the website (provided for free by Html5up),
+							optional free photos from Unsplash, an optional domain name (for $6 to $13 from Namecheap),
+							and from web hosting service from GitHub Pages.<br>
+
+							Many popular website builder’s (like Squarespace, Wix and Wordpress) are good at setting up
+							nice looking, fast generated websites, but they require a monthly service fee for hosting
+							it. Typical website fees stem from: holding a domain name (like ‘myexample.com’) for a
+							yearly fee of ~$13; using web hosting servers (like Wordpress or HostPapa) for a monthly fee
+							of ~$2; HTML theme files for free or ~$55 for fancy ones.<br>
+
+							The website building method I chose can get you all elements you need to host your own
+							website for free (but I spent the extra few dollars to get a nice domain name instead of
+							'username.github.io’). Note that GitHub Pages is a static website, which means it’s primary
+							usage it to display consistent content regardless of user (while dynamic websites can
+							display content dynamically for different user profiles, like Netflix). For me right now,
+							GitHub Pages is fine.
+
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-Github-Pages\website-github-pages_2.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Github pages is free to get is you have an account (accounts are free).</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> html template packaged files (free from Html5up); optional photos (free from
+							Unsplash); optional domain name (for $13/year from Namecheap, or $6/year with first time
+							buyer’s coupon); GitHub Pages web hosting service (so you need a GitHub account)</p>
+
+						<p>Following the directions from GitHub to setup GitHub Pages: I made a new repository called
+							'username.github.io’ (where 'username' is my GitHub username); cloned the repo to my desktop
+							(using whatever shell terminal, like VSCode’s).<br>
+
+							I then found a nice free html template package from Html5up, downloaded it, and copied those
+							files to my root github rep; there the index.html would act as my website’s home page. Note:
+							I could have used GitHub Page’s partner themes, but I found lots of them to be plain. Joshua
+							Fluke’s tutorial on website building is how I learned about setting up a website and using
+							Html5up themes, so I appreciate his tutorial!<br>
+
+							I then decided to buy a domain name from Namecheap’s website and got a .com one (for $6/year
+							for first time buyers, otherwise it would have been $13/year which is typical of many
+							providers). In order to use with GitHub, I had to change the Namecheap’s domain name servers
+							(DNS) to include a redirection record (CNAME) to point to GitHub.<br>
+
+							Finally, I set the protocol to be HTTPS automatic redirection (because why not, its
+							apparently safer) and then started changing my html pages to be filled with content like
+							articles and photos of my experiences (VSCode has a handy ‘live server’ extension that
+							allows for live viewing of a webpage while updating it at the same time).
+
+						</p>
+
+
+						<span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-Github-Pages\website-github-pages_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Get free html packages that are already packed with responsive website boxes and
+									buttons.</i>
+							</p>
+						</div>
+
+						<!-- <span class="image featured"><img
+								src="articleAssets\Website-Hosted-From-Github-Pages\website-github-pages_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Get free html packages that are already packed with responsive website boxes and
+									buttons.</i>
+							</p>
+						</div> -->
+
+						<h3>Lessons Learned and Future Changes</h3>
+						<b>Limited, but good enough.</b> As a single purpose website, it is great; I
+						can fit whatever pages I want at a central location. Downsides: it’s static so if I want to do
+						some deep custom server tinkering, I need to find appropriate libraires that will work with
+						static pages, or switch hosting to a personal device server (like a laptop or raspberry pi). It
+						also only uses 1 subdomain; since we are a GitHub subdomain, we cannot make our own subdomain
+						within (at least not that I’m aware of), but for my purposes, this is a very minor defect. If I
+						want to utilize more subdomains, I can find other hosting options like No-IP or personal
+						hardware servers (and still use my bought domain name).</p>
+
+						<h3>References</h3>
+						<p>GitHub Pages free website hosting: https://pages.github.com/ <br>
+							HTML5UP.net free website themes: https://html5up.net/ <br>
+							Unsplash free photos: https://unsplash.com/ <br>
+							Namecheap cheap domain name leasing: https://www.namecheap.com/ <br>
+							Joshua Fluke’s website building tutorial:
+							https://www.youtube.com/watch?v=u-RLu_8kwA0&ab_channel=JoshuaFluke
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
