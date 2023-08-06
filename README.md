@@ -7,7 +7,7 @@ theme download url: https://html5up.net/ ; https://html5up.net/arcana
 
 free photos: https://unsplash.com/
 
-free? GIFs: https://giphy.com/
+free videos: https://pixabay.com/
 
 
 use 'live server' extension on VSCode to open index.html as live page (for live updating when editing static websites)
