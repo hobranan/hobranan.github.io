@@ -42,7 +42,7 @@
 					<article>
 						<header>
 							<h2>Reflecting On Embedded Systems Concepts With Arduino And FreeRTOS</h2>
-							<p>TAGS: electronics; software; FreeRTOS; Arduino; nano; stepper motor; UART; </p>
+							<p>TAGS: electronics; software; FreeRTOS; Arduino; Nano; stepper motor; UART; </p>
 						</header>
 
 						<h3>Why I Did This</h3>
@@ -56,7 +56,7 @@
 
 							FreeRTOS is an example of a real-time operating system (it’s in the name). I learned that
 							you could import the FreeRTOS library on the Arduino IDE, so I wanted to reflect on the
-							concepts in learned in my course and how I could apply them to an Arduino project.<br>
+							concepts in learned in my course and how I could apply them to an Arduino project. <br>
 
 							The main concepts our course focused on were: multi-tasking/concurrency and priorities;
 							queue containers; UART and SPI communications; device control (motors with opto-isolator,
@@ -67,39 +67,38 @@
 								src="articleAssets\Reflecting-On-Embedded-Systems-Concepts-With-FreeRTOS\Reflecting-Embedded-FreeRTOS_1.jpg"
 								alt="" /></span>
 						<div class="center">
-							<p><i>A dual Arduino nano setup.<br>One with a button, LED array, OLED display, and acts as
-									UART
-									sender.<br>The other as another OLED display, the UART receiver, and steper motor
+							<p><i>A dual Arduino Nano setup.<br>Left Nano with a button, LED array, OLED display, and acts as
+									UART sender.<br> The other right Nano with another OLED display, the UART receiver, and stepper motor
 									controller.</i>
 							</p>
 						</div>
 
 						<h3>Design Walkthrough</h3>
-						<p><b>Parts:</b> 2x Arduino microcontroller (nano); FreeRTOS library; 2x OLED displays; 5x LEDs;
+						<p><b>Parts:</b> 2x Arduino microcontroller (Nano); FreeRTOS library; 2x OLED displays; 5x LEDs;
 							stepper motor (and ULN2003 driver)</p>
 
 						<p>I wanted to showcase as much of the concepts I listed above, so I made a scene where one
-							Arduino nano is holding a hardware button and 2 prioritized (but concurrently acting) tasks
-							that log and trigger a UART communication (to a second Arduino nano) when the button is
-							pressed. The first nano, when hitting the button, will increment the display with ‘number of
+							Arduino Nano is holding a hardware button and 2 prioritized (but concurrently acting) tasks
+							that log and trigger a UART communication (to a second Arduino Nano) when the button is
+							pressed. The first Nano, when hitting the button, will increment the display with ‘number of
 							button presses’, and trigger a led array to light sequentially along the array (1 to 5,
 							after a second each); when the final led is lit, a second display number will increment the
-							‘UART counts’ and the UART communication signal will send to the other nano.<br><br>
+							‘UART counts’ and the UART communication signal will send to the other Nano.<br><br>
 
 							The second Arduino will receive the UART communication to display on the OLED an increment
 							of the ‘UART counts' log and trigger a stepper motor’s rotation. After the stepper is done a
 							revolution, the display will increment the ‘number of stepper revolutions’.<br><br>
 
-							The first nano’s display will also show an incrementing fast counter to act as a ‘heartbeat
+							The first Nano’s display will also show an incrementing fast counter to act as a ‘heartbeat
 							counter’.<br><br>
 
-							This dual nano scene performs:<br>
+							This dual Nano scene performs:<br>
 							- multi-tasking/concurrency with the two tasks on the first Arduino that:<br>
 							Task 1: increment the heartbeat counter and handle displaying all OLED information;<br>
-							Task 2: handle the LED array animation and send UART communication to the other nano;<br>
+							Task 2: handle the LED array animation and send UART communication to the other Nano;<br>
 							- button triggering interrupts that increment a counter and trigger the led array.<br>
 							- UART communication (with the aforementioned second task).<br>
-							- stepper control from the second nano.<br><br>
+							- stepper control from the second Nano.<br><br>
 
 							The scene is missing concrete displays of:<br>
 							- task prioritizations (the ‘led array’ task is higher priority that the ‘OLED’ task, but
@@ -109,7 +108,8 @@
 							- SPI communications (I was using I2C for displays and UART for Arduino comms but didn’t
 							find an appropriate example to use SPI).<br>
 							- polling (I didn’t have a good example of hardware attention checking).<br>
-							I can probably make another scene on a different article to showcase these missing features, but
+							I can probably make another scene on a different article to showcase these missing features,
+							but
 							for now I will use what I included.
 						</p>
 
@@ -119,17 +119,18 @@
 									src="articleAssets\Reflecting-On-Embedded-Systems-Concepts-With-FreeRTOS\Reflecting-Embedded-FreeRTOS_3.mp4"
 									type="video/mp4">
 							</video>
-							<p><i>- Button is pressed, triggering an interrupt that increment the first counter (Display
-									1, left number).<br><br>
-									- Increment causes another task (LED array) to animate; after completing, causes an
-									increment of another counter (Display 1, middle number) and trigger UART
-									communication to other Arduino.<br><br>
-									- Nano receives UART and increments another counter (Display 2, left
-									number).<br><br>
-									- Increment causes stepper motor to revolve; after completing, causes an increment
-									of another counter (Display 2, middle number).<br><br>
-									- First display has counter (Display 1, right number) that acts as a heartbeat, but
-									also displays concurrency is its increment isn't interrupted when the led array is
+							<p><i>- Button is pressed on left Arduino Nano, triggering an interrupt that increments the
+									first counter (Left Display, left number).<br><br>
+									- Counter incrementing causes another task (LED array) to animate; after completing,
+									causes an
+									increment of another counter (Left Display, middle number) and triggers UART
+									communications to right Arduino Nano.<br><br>
+									- Right Arduino Nano receives UART and increments another counter (Right Display,
+									left number).<br><br>
+									- That incrementing causes the stepper motor to revolve; after completing revolution, causes an increment
+									of another counter (Right Display, middle number).<br><br>
+									- Also, first display has counter (Left Display, right number) that acts as a heartbeat,
+									but also displays concurrency as its 'incrementing' task isn't stalled when the same board's 'LED array' task is
 									activated.
 								</i>
 							</p>
@@ -143,9 +144,9 @@
 						microcontroller.
 						<b>Opto-mise it.</b> I had at first attempted to use an opt-isolator with the stepper motor, but
 						it
-						wasn’t receiving the input signals, so I hard wired the inputs between the nano and stepper.
+						wasn’t receiving the input signals, so I hard wired the inputs between the Nano and stepper.
 						This is bad practise as motors can induce back voltage through the signal lines that will fry
-						the board, but I was ok with risking it for a cheap nano for the sake of this demo.
+						the board, but I was ok with risking it for a cheap Nano for the sake of this demo.
 						</p>
 
 						<h3>References</h3>
