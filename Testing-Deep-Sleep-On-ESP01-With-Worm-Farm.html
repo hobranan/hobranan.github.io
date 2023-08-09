@@ -79,9 +79,11 @@
 							using an Arduino Uno as the serial uploader, but it took me like 20 tries (fiddling,
 							adjusting wires, unplug/plugging) in order to get it to successfully upload.<br><br>
 
-							Much like AdafruitIO, Cayenne was also giving me issues with connectivity, but at least it was showing up
+							Much like AdafruitIO, Cayenne was also giving me issues with connectivity, but at least it
+							was showing up
 							on their servers (for like a split second). I then found custom code by Cayenne Community
-							board user ‘Sven’ (who was also doing deep-sleep and using a DS18B20 probe) and found that with his code 
+							board user ‘Sven’ (who was also doing deep-sleep and using a DS18B20 probe) and found that
+							with his code
 							the connectivity was much better, and I was able to see values stay on the Cayenne
 							webpage.<br><br>
 
@@ -96,8 +98,10 @@
 								src="articleAssets\Testing-Deep-Sleep-On-ESP01-With-Worm-Farm\esp01_sleep_worm_1.jpg"
 								alt="" /></span>
 						<div class="center">
-							<p><i>I programmed the ESP-01 through an Arduino Uno, and tested its amp draw (it shows zero when in deep sleep).<br>
-							I also have the probe next to another temperature gauge to check for discrepancy.</i>
+							<p><i>I programmed the ESP-01 through an Arduino Uno, and tested its amp draw (it shows zero
+									when in deep sleep).<br>
+									I also have the probe next to another temperature gauge to check for
+									discrepancy.</i>
 							</p>
 						</div>
 
@@ -105,7 +109,8 @@
 								src="articleAssets\Testing-Deep-Sleep-On-ESP01-With-Worm-Farm\esp01_sleep_worm_2.jpg"
 								alt="" /></span>
 						<div class="center">
-							<p><i>The temperature probe reads pretty darn close to separate gauge, but are they both accurate?</i>
+							<p><i>The temperature probe reads pretty darn close to separate gauge, but are they both
+									accurate?</i>
 							</p>
 						</div>
 
@@ -149,7 +154,13 @@
 						nothing in deep-sleep). I hope to eventually tune this setup to get like months use out of the
 						battery, but for now I’ll test short term draw. I don’t have a multimeter that accurately goes
 						below the milliAmp range, so for now I’m just testing by checking periodical for battery drain.
-						I read that removing the boards LEDs can help with lowering amperage.<br>
+						I read that removing the board's LEDs can help with lowering amperage.<br><br>
+
+						<b>Update: Battery didn't last overnight (less than 18hrs use), not good!</b> When I checked the setup this morning i
+						expected it to still run at least for the day, but it was at 2.5V (which is apparently below
+						this device's operating voltage range). I will lower the program looping frequency (i.e.
+						increasing deep sleep time from 1-minute to 30-minutes), remove that
+						'always on' LED, and replace the battery with some AAs (3.00V at 10:30am aug 9) .<br>
 
 						<h3>References</h3>
 						<p>
