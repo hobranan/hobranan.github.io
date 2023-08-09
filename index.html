@@ -56,6 +56,21 @@
       </nav>
     </div>
 
+    <p>Temperature: <span id="temperature"></span></p>
+    <p>Humidity: <span id="humidity"></span></p>
+    <h1>Smart Home Dashboard</h1>
+    <div>
+        <h2>Camera Snapshot</h2>
+        <img src="{{ camera_snapshot_url }}" alt="Camera Snapshot">
+    </div>
+
+    <script>
+        const queryParams = new URLSearchParams(window.location.search);
+        document.getElementById('temperature').textContent = queryParams.get('temperature') || 'N/A';
+        document.getElementById('humidity').textContent = queryParams.get('humidity') || 'N/A';
+    </script>
+
+
     <!-- Gigantic Heading -->
     <section class="wrapper style2">
       <div class="container">
