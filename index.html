@@ -56,20 +56,78 @@
       </nav>
     </div>
 
-    <p>Temperature: <span id="temperature"></span></p>
-    <p>Humidity: <span id="humidity"></span></p>
-    <h1>Smart Home Dashboard</h1>
-    <div>
-        <h2>Camera Snapshot</h2>
-        <img src="{{ camera_snapshot_url }}" alt="Camera Snapshot">
-    </div>
-
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
     <script>
-        const queryParams = new URLSearchParams(window.location.search);
-        document.getElementById('temperature').textContent = queryParams.get('temperature') || 'N/A';
-        document.getElementById('humidity').textContent = queryParams.get('humidity') || 'N/A';
+      const firebaseConfig = {
+        apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
+        authDomain: "greenhouse-ha2website.firebaseapp.com",
+        databaseURL: "https://greenhouse-ha2website-default-rtdb.firebaseio.com",
+        projectId: "greenhouse-ha2website",
+        storageBucket: "greenhouse-ha2website.appspot.com",
+        messagingSenderId: "34194115355",
+        appId: "1:34194115355:web:a5253fa42e0003654b61be",
+        measurementId: "G-XHHMXNNTXB"
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      // Fetch and display data from Firebase
+      const database = firebase.database();
+      const dataRef = database.ref('/data');
+      dataRef.on('value', snapshot => {
+        const data = snapshot.val();
+        document.getElementById('temperature').textContent = data.temperature + " °C";
+        document.getElementById('humidity').textContent = data.humidity + " %";
+        // document.getElementById('camera').src = data.camera_url;
+      });
     </script>
 
+    <!-- <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
+        authDomain: "greenhouse-ha2website.firebaseapp.com",
+        databaseURL: "https://greenhouse-ha2website-default-rtdb.firebaseio.com",
+        projectId: "greenhouse-ha2website",
+        storageBucket: "greenhouse-ha2website.appspot.com",
+        messagingSenderId: "34194115355",
+        appId: "1:34194115355:web:a5253fa42e0003654b61be",
+        measurementId: "G-XHHMXNNTXB"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+    <script>
+      // Example using Firebase Realtime Database
+      const database = firebase.database();
+
+      database.ref('/data').on('value', snapshot => {
+        const data = snapshot.val();
+        document.getElementById('temperature').textContent = data.temperature + " °C";
+        document.getElementById('humidity').textContent = data.humidity + " %";
+        document.getElementById('camera').src = data.camera_url;
+      });
+    </script> -->
+
+
+    <p>Temperature: <span id='temperature'></span></p>
+    <p>Humidity: <span id='humidity'></span></p>
+    <div>
+      <h2>Camera Snapshot:</h2>
+      <!-- <img src="{{ media\local\snapshot.jpg }}" alt="Camera Snapshot"> -->
+      <!-- <img src="camera" alt="Camera Snapshot"> -->
+    </div>
 
     <!-- Gigantic Heading -->
     <section class="wrapper style2">
@@ -78,24 +136,24 @@
           <div class="center">
             <span class="image-profile"><img src="images/profile_photo.png" alt="" /></span>
           </div>
-            <div class="row">
-              <h2>
-                I'm an inquisitive Computer / Software Engineer eager to learn more
-                about the technology our of time.
-              </h2>
-            </div>
-            <p>
-              I enjoy most flavors of engineering, but my passion is across the electrical, computer, and mechanical
-              areas. I
-              greatly enjoy learning/tinkering with electronic and software systems
-              like instruments, robotics, radio/wireless communications, 3D models, games, computer simulations.<br><br>
-              I also love thinking aboout technology in nature and sustainbility concepts like Earth ships (self
-              sustaining homes), renewable designs, and low/free power projects.<br><br>
-              Additionally, my previous work experience was as a 3rd Class Power Engineer and a
-              Chemical Engineering Technologist involving industrial
-              plant operations, small research pilot chemical plants, and research lab
-              environments.
-            </p>
+          <div class="row">
+            <h2>
+              I'm an inquisitive Computer / Software Engineer eager to learn more
+              about the technology our of time.
+            </h2>
+          </div>
+          <p>
+            I enjoy most flavors of engineering, but my passion is across the electrical, computer, and mechanical
+            areas. I
+            greatly enjoy learning/tinkering with electronic and software systems
+            like instruments, robotics, radio/wireless communications, 3D models, games, computer simulations.<br><br>
+            I also love thinking aboout technology in nature and sustainbility concepts like Earth ships (self
+            sustaining homes), renewable designs, and low/free power projects.<br><br>
+            Additionally, my previous work experience was as a 3rd Class Power Engineer and a
+            Chemical Engineering Technologist involving industrial
+            plant operations, small research pilot chemical plants, and research lab
+            environments.
+          </p>
         </header>
       </div>
     </section>
