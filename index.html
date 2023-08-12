@@ -74,11 +74,13 @@
 
       // Fetch and display data from Firebase
       const database = firebase.database();
-      const dataRef = database.ref('/data');
+      const dataRef = database.ref('/sensor_data');
       dataRef.on('value', snapshot => {
         const data = snapshot.val();
-        document.getElementById('temperature').textContent = data.temperature + " °C";
+        document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
         document.getElementById('humidity').textContent = data.humidity + " %";
+        document.getElementById('temperature').textContent = data.temperature + " °C";
+        document.getElementById('data').textContent = JSON.stringify(data, null, 2);
         // document.getElementById('camera').src = data.camera_url;
       });
     </script>
@@ -123,8 +125,10 @@
 
     <p>Temperature: <span id='temperature'></span></p>
     <p>Humidity: <span id='humidity'></span></p>
+    <p>Barometric Pressure: <span id='temperature'></span></p>
+    <p>Data: <div id="data"></div></p>
     <div>
-      <h2>Camera Snapshot:</h2>
+      <!-- <h2>Camera Snapshot:</h2> -->
       <!-- <img src="{{ media\local\snapshot.jpg }}" alt="Camera Snapshot"> -->
       <!-- <img src="camera" alt="Camera Snapshot"> -->
     </div>
