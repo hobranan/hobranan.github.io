@@ -112,7 +112,7 @@
           document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
           document.getElementById('humidity').textContent = data.humidity + " %";
           document.getElementById('temperature').textContent = data.temperature + " °C";
-          document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+          // document.getElementById('data').textContent = JSON.stringify(data, null, 2);
         } catch (error) {
           console.error(error);
         }
