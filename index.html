@@ -73,9 +73,8 @@
       firebase.initializeApp(firebaseConfig);
 
       // Fetch and display data from Firebase
-      const database = firebase.database();
-      const dataRef = database.ref('sensor_data');
-      dataRef.on('value', snapshot => {
+      var dataRef = firebase.database().ref('sensor_data');
+      dataRef.on('value', (snapshot) => {
         const data = snapshot.val();
         document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
         document.getElementById('humidity').textContent = data.humidity + " %";
@@ -126,7 +125,9 @@
     <p>Temperature: <span id='temperature'></span></p>
     <p>Humidity: <span id='humidity'></span></p>
     <p>Barometric Pressure: <span id='temperature'></span></p>
-    <p>Data: <div id="data"></div></p>
+    <p>Data:
+    <div id="data"></div>
+    </p>
     <div>
       <!-- <h2>Camera Snapshot:</h2> -->
       <!-- <img src="{{ media\local\snapshot.jpg }}" alt="Camera Snapshot"> -->
