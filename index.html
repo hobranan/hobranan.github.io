@@ -56,128 +56,16 @@
       </nav>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
-    <!-- <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
-        authDomain: "greenhouse-ha2website.firebaseapp.com",
-        databaseURL: "https://greenhouse-ha2website-default-rtdb.firebaseio.com",
-        projectId: "greenhouse-ha2website",
-        storageBucket: "greenhouse-ha2website.appspot.com",
-        messagingSenderId: "34194115355",
-        appId: "1:34194115355:web:a5253fa42e0003654b61be",
-        measurementId: "G-XHHMXNNTXB"
-      };
-
-      firebase.initializeApp(firebaseConfig);
-
-      // Fetch and display data from Firebase
-      var dataRef = firebase.database().ref('sensor_data');
-      dataRef.on('value', (snapshot) => {
-        const data = snapshot.val();
-        document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
-        document.getElementById('humidity').textContent = data.humidity + " %";
-        document.getElementById('temperature').textContent = data.temperature + " °C";
-        document.getElementById('data').textContent = JSON.stringify(data, null, 2);
-        // document.getElementById('camera').src = data.camera_url;
-      });
-    </script> -->
-    <div id="baro_pressure">Loading...</div>
-    <div id="humidity">Loading...</div>
-    <div id="temperature">Loading...</div>
-    <script>
-      // import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js'
-      // // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
-      // import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js'
-      // // Add Firebase products that you want to use
-      // import { getAuth } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
-      // import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js'
-      // const firebaseConfig = {
-      //   apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
-      //   authDomain: "greenhouse-ha2website.firebaseapp.com",
-      //   databaseURL: "https://greenhouse-ha2website-default-rtdb.firebaseio.com",
-      //   projectId: "greenhouse-ha2website",
-      //   storageBucket: "greenhouse-ha2website.appspot.com",
-      //   messagingSenderId: "34194115355",
-      //   appId: "1:34194115355:web:a5253fa42e0003654b61be",
-      //   measurementId: "G-XHHMXNNTXB"
-      // };
-      // const app = initializeApp(firebaseConfig);
-      async function fetchData() {
-        const apiKey = 'AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk';
-        const databaseURL = 'https://greenhouse-ha2website-default-rtdb.firebaseio.com';
-        const dataPath = 'sensor_data';
-        try {
-          const response = await fetch('https://greenhouse-ha2website-default-rtdb.firebaseio.com/sensor_data.json?auth=AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk');
-          const data = await response.json();
-          document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
-          document.getElementById('humidity').textContent = data.humidity + " %";
-          document.getElementById('temperature').textContent = data.temperature + " °C";
-          // document.getElementById('data').textContent = JSON.stringify(data, null, 2);
-        } catch (error) {
-          console.error(error);
-        }
-      }
-      fetchData();
-    </script>
-
-    <!-- <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
-        authDomain: "greenhouse-ha2website.firebaseapp.com",
-        databaseURL: "https://greenhouse-ha2website-default-rtdb.firebaseio.com",
-        projectId: "greenhouse-ha2website",
-        storageBucket: "greenhouse-ha2website.appspot.com",
-        messagingSenderId: "34194115355",
-        appId: "1:34194115355:web:a5253fa42e0003654b61be",
-        measurementId: "G-XHHMXNNTXB"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
-
-    <script>
-      // Example using Firebase Realtime Database
-      const database = firebase.database();
-
-      database.ref('/data').on('value', snapshot => {
-        const data = snapshot.val();
-        document.getElementById('temperature').textContent = data.temperature + " °C";
-        document.getElementById('humidity').textContent = data.humidity + " %";
-        document.getElementById('camera').src = data.camera_url;
-      });
-    </script> -->
-    <div id="baro_pressure">Loading...</div>
-    <div id="humidity">Loading...</div>
-    <div id="temperature">Loading...</div>
-
-    <p>Temperature: <span id='temperature'></span></p>
-    <p>Humidity: <span id='humidity'></span></p>
-    <p>Barometric Pressure: <span id='temperature'></span></p>
-    <p>Data:
-    <div id="data"></div>
-    </p>
-    <div>
-      <!-- <h2>Camera Snapshot:</h2> -->
-      <!-- <img src="{{ media\local\snapshot.jpg }}" alt="Camera Snapshot"> -->
-      <!-- <img src="camera" alt="Camera Snapshot"> -->
-    </div>
-
     <!-- Gigantic Heading -->
     <section class="wrapper style2">
       <div class="container">
         <header class="major">
+          <div class="center">
+            <p>Greenhouse Values</p>
+            <p>Temperature: <span id="temperature">Loading...</span></p>
+            <p>Humidity: <span id="humidity">Loading...</span></p>
+            <p>Barometric Pressure: <span id="baro_pressure">Loading...</span></p>
+          </div>
           <div class="center">
             <span class="image-profile"><img src="images/profile_photo.png" alt="" /></span>
           </div>
@@ -467,6 +355,28 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+  <script>
+    async function fetchData() {
+      const apiKey = 'AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk';
+      const databaseURL = 'https://greenhouse-ha2website-default-rtdb.firebaseio.com';
+      const dataPath = 'sensor_data';
+      try {
+        const response = await fetch('https://greenhouse-ha2website-default-rtdb.firebaseio.com/sensor_data.json?auth=AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk');
+        const data = await response.json();
+        document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
+        document.getElementById('humidity').textContent = data.humidity + " %";
+        document.getElementById('temperature').textContent = data.temperature + " °C";
+        // document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+    fetchData();
+  </script>
+
 </body>
 
 </html>
