@@ -85,12 +85,29 @@
     </script> -->
 
     <script>
+      // import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js'
+      // // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+      // import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js'
+      // // Add Firebase products that you want to use
+      // import { getAuth } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js'
+      // import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js'
+      // const firebaseConfig = {
+      //   apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
+      //   authDomain: "greenhouse-ha2website.firebaseapp.com",
+      //   databaseURL: "https://greenhouse-ha2website-default-rtdb.firebaseio.com",
+      //   projectId: "greenhouse-ha2website",
+      //   storageBucket: "greenhouse-ha2website.appspot.com",
+      //   messagingSenderId: "34194115355",
+      //   appId: "1:34194115355:web:a5253fa42e0003654b61be",
+      //   measurementId: "G-XHHMXNNTXB"
+      // };
+      // const app = initializeApp(firebaseConfig);
       async function fetchData() {
         const apiKey = 'AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk';
         const databaseURL = 'https://greenhouse-ha2website-default-rtdb.firebaseio.com';
         const dataPath = 'sensor_data';
         try {
-          const response = await fetch('${databaseURL}/${dataPath}.json?auth=${apiKey}');
+          const response = await fetch('https://greenhouse-ha2website-default-rtdb.firebaseio.com/sensor_data.json?auth=AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk');
           const data = await response.json();
           document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
           document.getElementById('humidity').textContent = data.humidity + " %";
