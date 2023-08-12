@@ -90,7 +90,7 @@
         const databaseURL = 'https://greenhouse-ha2website-default-rtdb.firebaseio.com';
         const dataPath = 'sensor_data';
         try {
-          const response = await fetch(`${databaseURL}/${dataPath}.json?auth=${apiKey}`);
+          const response = await fetch('${databaseURL}/${dataPath}.json?auth=${apiKey}');
           const data = await response.json();
           document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
           document.getElementById('humidity').textContent = data.humidity + " %";
