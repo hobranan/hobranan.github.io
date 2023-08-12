@@ -74,7 +74,7 @@
 
       // Fetch and display data from Firebase
       const database = firebase.database();
-      const dataRef = database.ref('/sensor_data');
+      const dataRef = database.ref('sensor_data');
       dataRef.on('value', snapshot => {
         const data = snapshot.val();
         document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
