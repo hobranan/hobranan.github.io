@@ -58,7 +58,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
-    <script>
+    <!-- <script>
       const firebaseConfig = {
         apiKey: "AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk",
         authDomain: "greenhouse-ha2website.firebaseapp.com",
@@ -82,6 +82,25 @@
         document.getElementById('data').textContent = JSON.stringify(data, null, 2);
         // document.getElementById('camera').src = data.camera_url;
       });
+    </script> -->
+
+    <script>
+      async function fetchData() {
+        const apiKey = 'AIzaSyD8scI-mQptrrszT-e2fsnllHSPZGxmxfk';
+        const databaseURL = 'https://greenhouse-ha2website-default-rtdb.firebaseio.com';
+        const dataPath = 'sensor_data';
+        try {
+          const response = await fetch(`${databaseURL}/${dataPath}.json?auth=${apiKey}`);
+          const data = await response.json();
+          document.getElementById('baro_pressure').textContent = data.baro_pressure + " hPa";
+          document.getElementById('humidity').textContent = data.humidity + " %";
+          document.getElementById('temperature').textContent = data.temperature + " °C";
+          document.getElementById('data').textContent = JSON.stringify(data, null, 2);
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      fetchData();
     </script>
 
     <!-- <script type="module">
