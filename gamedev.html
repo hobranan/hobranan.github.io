@@ -137,10 +137,11 @@
 
 						<p>
 							<br>Here is a link to the Unity Play webpage where you can play the level yourself:<br>
-							<a href="https://play.unity.com/mg/other/tanks-shooter-but-against-computer-tanks" target="_blank">
-							  https://play.unity.com/mg/other/tanks-shooter-but-against-computer-tanks
+							<a href="https://play.unity.com/mg/other/tanks-shooter-but-against-computer-tanks"
+								target="_blank">
+								https://play.unity.com/mg/other/tanks-shooter-but-against-computer-tanks
 							</a>
-						  </p>
+						</p>
 
 						<h3>Lessons Learned</h3>
 						The demo allowed me to try win/lose triggers for the scene overtop simple UIs, and allowed me to
@@ -149,7 +150,7 @@
 						on not on same computer (and I wanted the interactivity of automatic enemies), so I would like
 						to later try learning demos of online multiplayer setups.<br>
 						I got to be immersed into gameplay while listening to my audio track and it gave me perspective
-						on how well the track fits with the scene: I felt the music was gelling well with the scene, but
+						on how well the track fits with the scene: I felt the music was mixing well with the scene, but
 						some parts I felt were overly distracting.
 						</p>
 
@@ -197,7 +198,8 @@
 							</iframe>
 						</div>
 
-						<h3><br> FMOD's visual parametrization of sounds (lawnmower) to be used as replacement kart SFX
+						<h3><br> FMOD's visual parametrization of sounds (lawnmower), against kart RPM/gas/velocity
+							level, to be used as replacement kart SFX
 						</h3>
 						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
 							<iframe id="ytplayer" type="text/html"
@@ -215,13 +217,14 @@
 						</div>
 
 						<h3>Lessons Learned</h3>
-						I think FMOD may be useful, but there is a learning curve needed and the basic Unity
+						The FMOD SFX replacement sounds marginally better, but probably no difference to most listeners.
+						FMOD has a learning curve and I'm assuming the basic Unity
 						audio tools
-						(especially with the newer editor version) seem to do most of what FMOD can do (I
-						think, I
-						haven’t explored the entirety of FMOD; there might be crucial/quality features that
+						(especially with the newer editor versions) seem to do most of what FMOD can do (I
+						think). However, I
+						haven’t explored the entirety of FMOD; so there might be crucial/quality features that
 						FMOD has,
-						that Unity doesn’t); while the visual parametrization (that FMOD was demoed with)
+						that Unity doesn’t. While the visual parametrization (that FMOD was demoed with)
 						seems useful,
 						it can be substituted with in-depth audio scripting (i.e. precise code that mimics
 						parametrization).
@@ -318,7 +321,7 @@
 
 							Given that I am a fan of the Zelda game series, I used MIDI files from “A Link to the Past”
 							(awesome classic game), to modify the instruments and notes to remix those tunes. (note:
-							these tunes are NOT for commercial use, they are just educational demos).<br><br>
+							these tunes are NOT for commercial use, they are just educational demos).
 						</p>
 
 						<h3><br>Original ‘exploring’ tune:</h3>
@@ -342,7 +345,7 @@
 								type="audio/wav">
 						</audio>
 
-						<h3><br>Remixed ‘boss fight’ tune (makes it sound like cyberpunk battle music):</h3>
+						<h3><br>Remixed ‘boss fight’ tune (makes it sound like cyberpunk-like music):</h3>
 						<audio muted class="player" controls preload="none" controlsList="nodownload"
 							style="width: 100%;">
 							<source src="https://docs.google.com/uc?export=open&id=1I8YKaUCzAYwXFdMyBhJiXQnMvqOb2cLD"
@@ -462,10 +465,10 @@
 						</div>
 
 						<h3>Lessons Learned</h3>
-						As said before, this can be unnecessary for simple games, but it also show just how little
+						As said before, this can be unnecessary for simple games, but it also show just how little a
 						scripting effort is needed to make higher quality scenes.<br>I imagine putting these algorithmic
 						techniques on enemies so that when I hit them with different force intensities, they can react
-						with different intensities (all without individually assigning noises to individual
+						with different moan/hurt intensities (all without individually assigning noises to individual
 						enemies).
 						</p>
 
@@ -489,11 +492,11 @@
 						</header>
 
 						<h3>Why I Did This</h3>
-						<p>Unity has dedicated tools for 2D development. These include tilemap and spritemap tools that
+						<p>Unity has dedicated tools for 2D development; these include tilemap and spritemap tools that
 							make it easy to paint a scene with a 2D environment.<br><br>
-							I practice with these tools to create a top-down 2D environment as a starter simulation for
+							I practiced with these tools to create a top-down 2D environment as a starter simulation for
 							my UAlberta student club Renewable Energy Design (RED) (I’m not making anything for that
-							club, I’m just using it as a simulation inspiration for 2D development).
+							club, I’m just using it as a simulation inspiration for 2D top-down development).
 
 						</p>
 
@@ -544,14 +547,13 @@
 							-Spatial distance audio intensity (the further away a sound is, the quieter it is).<br>
 							-Doppler effect (as a sound move towards you it is higher pitched, and vice versa).<br>
 							-Reverb zones (audio sources gain effects when they are in marked zones).<br>
-							I demoed these effects on a Monster growling scene asset (whcih shows the SFX tools) and
+							I demoed these effects on a Monster growling scene asset (which shows the SFX tools) and
 							Viking village scene asset where the player ‘listener’ (a rock)
 							was moving near fire sources embedded with spatial flames sounds and siren doppler sounds,
 							and a building producing 'hall' audio effects (reverb zones).
-
 						</p>
-
-						<h3><br>Unity's basic audio mixer tools (with file controls, output channels, channel effects):
+						<h3>Unity's basic audio mixer tools (output channels, channel effects, inspector property
+							effects ):
 						</h3>
 						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
 							<iframe id="ytplayer" type="text/html"
@@ -560,7 +562,8 @@
 							</iframe>
 						</div>
 
-						<h3><br>Spatial audio and doppler effect in Viking village:</h3>
+						<h3><br>Spatial intensity audio (right torch, with flame sounds) and doppler effect (left torch,
+							with beeping sounds) in Viking village:</h3>
 						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
 							<iframe id="ytplayer" type="text/html"
 								src="https://www.youtube.com/embed/2wFwc8QqeWI?&mute=1" frameborder="0"
@@ -568,7 +571,7 @@
 							</iframe>
 						</div>
 
-						<h3><br>Reverb zones in Viking village:</h3>
+						<h3><br>Reverb zones (echo-ey cabin zone, with footsteps) in Viking village:</h3>
 						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
 							<iframe id="ytplayer" type="text/html"
 								src="https://www.youtube.com/embed/ZvZdkHyZ2gA?&mute=1" frameborder="0"
@@ -579,7 +582,10 @@
 
 						<h3>Lessons Learned</h3>
 						It was good to get more in depth knowledge of Unity’s audio tools, especially around dynamic
-						audio effects. So far the tools/controls seem straight forward.
+						audio effects. So far the tools/controls seem straight forward. I would like to explore more
+						with audio tools that can mingle with game mechanics (like using an in game instrument, like
+						flute or
+						ocarina, and tune sequence, to trigger doors/chests).
 						</p>
 
 						<h3>References</h3>
@@ -612,8 +618,7 @@
 							other learning resources, and how to find game assets).<br>
 							I already had generic experience with the Unity editor so most of the learning in this
 							pathway was redundant knowledge, but there were some points that I did not know so it was
-							worthwhile to go through.<br><br>
-
+							worthwhile to go through.
 						</p>
 						<h3>Essentials completion page:</h3>
 						<span class="image featured"><img src="articleAssets\gamedev\unity_essentials.jpg" alt="" />
