@@ -1,0 +1,18 @@
+needed to get android box into maskrom mode:
+-buy usbA.male to usbA.male cord (must be 2.0 version, the 3.0 will not work)
+-install rockchip DriverAssitant v5.0 or v5.1.1 (as admin)
+-install rockchip FactoryTool v1.64
+-download Wechip_X88_Pro_RK3318_20190705_9.0_RC.img firmware
+-open FactoryTool v1.64
+
+Precise steps:
+-connect ground wire to 2 wire spots (i.e. red and blue spots in image unbrick_4) (keep this connnection going/still)
+-connect PC, to, USB2.0 port of tvbox (which will power the box; nothign else is connected)
+-*if done correctly the pc will detect maskrom device on a port; this might require multiple attempts
+-once maskrom is detected, then try to 'restore' the wechip firmware
+-my best guess for successful steps are to hit restore start, then look for upgrade prompt to start install, then release the 2 wire spots, and hopefully the install goes. this may take numerous fiddling attempts to get working.
+
+-afterwards you should have a workable firmware (in which you can then set to recovery mode to chnage to a different firmware via: unplug wires, plug in microsd with 'multitool' img (and 'armbian rk3318 lite' img within 'multitool' sd's images folder) hold button behind aux-in, plug in power, and keeping holding for about 10sec, then release and hopefully get the recovery mode)
+
+
+normal programming: use etcher to install 'multitool' img on microSD, then add 'armbian rk3318 lite' img within 'multitool' sd's images folder. plug microSd (in uSb adpater) into usb2 port (not miscrosd port). hold button behind aux-in, plug in power, and keeping holding for about 10sec, then release and hopefully get the recovery mode)

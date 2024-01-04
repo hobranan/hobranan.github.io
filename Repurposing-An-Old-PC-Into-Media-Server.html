@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Repurposing An Old PC Into A Media Server - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Repurposing An Old PC Into A Media Server</h2>
+							<p>TAGS: software; operating system OS; TrueNAS; OpenMediaVault; Docker; Linux Ubuntu with
+								Jellyfin
+							</p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I had an old (really old Windows Vista) PC that was collecting dust, so I wanted to see if I
+							could use it as a NAS storage server (just to increase my knowledge of it), or something
+							else like a Linux distro.
+						</p>
+
+						<span class="image featured"><img
+							src="articleAssets\Repurposing-An-Old-PC-Into-Media-Server\repurpose_old_PC_2.jpg" alt="" /></span>
+							<div class="center">
+								<p><i>Ubuntu is what Linux distro I settled with.</i>
+								</p>
+							</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Old PC, media server software (tried TrueNAS, OpenMediaVault, Docker, Linux
+							Ubuntu with server apps like Jellyfin)</p>
+
+						<p>
+							I tried various tutorials with various separate attempts to install and setup the basic OS
+							of TrueNAS or OpenMediaVault, even through a Docker container system; I was failing those
+							attempts because of hardware limitations so I then tried installing the Ubuntu OS with then
+							trying to install media server applications like Jellyfin (see references below for those
+							tutorials).
+						</p>
+
+						<h3>Lessons Learned</h3>
+						<p>
+							TrueNAS needs 2+ hard drives. It wasn’t clear at first but became apparent when I could not
+							see any available drives after installing. If I had a small 16GB drive I could dedicate that
+							to the OS, and use my present 500GB drive for storage. Apparently I can also use a USB
+							stick, but that it’s prone to burning out as it being use as the main OS gateway device
+							(also short-term testing showed that the OS is very slow from it).<br><br>
+
+							Docker would be great to allow multiple containers for multiple different servers, buuuuut…
+							My PC is so old that it’s hardware cannot support virtualization capabilities; I get an
+							error saying I lack KVM (for Kernel-based Virtual Machine) capabilities. I could still
+							install each OS, but I couldn’t install Docker to further install containers. However, I
+							could still install a Cloudflare tunnel through the shell CURL method (which is the only
+							thing I really care about for this test).<br><br>
+
+							OpenMediaVault seemed to work ok locally, but that is pointless for me. I managed to set it
+							up with a drive that I can see and share on my local network, but I wanted to have this
+							media server accessible from the public WAN. I couldn’t seem to get the Cloudflare tunnel to
+							function (not sure why and am not willing to router port forward; maybe I’m not
+							knowledgeable enough on this setup).<br><br>
+
+							Ubuntu with Jellyfin is what I settled with. I was able to setup Ubuntu, Jellyfin, and a
+							Cloudflare tunnel successfully with this setup. This is fine because it can display media
+							(mp4 and mp3, but jpg wasn’t showing), and I can still keep Ubuntu OS so that I can add more
+							apps and more servers in future project endeavours. If I were to be serious at a true NAS
+							development, then I would probably get some more disk drives and try one of the previous OS
+							based options again.
+						</p>
+
+						<h3>References</h3>
+						<p>
+							Hauke’s OpenMediaVault tutorial: https://www.youtube.com/watch?v=Y3yF1Rsu7ow <br>
+							TrueNAS sources: https://www.truenas.com/download-truenas-core/ https://www.truenas.com/download-truenas-scale/  <br>
+							Jellyfin install on Ubuntu: https://jellyfin.org/docs/general/installation/linux/ <br>
+							Fabrice’s ‘Jellyfin with Cloudflare’ Tutorial: https://medium.com/@fabrice_/setting-up-a-media-server-jellyfin-and-making-it-securely-accessible-from-anywhere-in-the-world-ca3b4d9dd19e 
+						
+						</p>
+
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

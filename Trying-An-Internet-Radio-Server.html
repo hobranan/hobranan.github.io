@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Trying An Internet Radio Server Called Icecast - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Trying An Internet Radio Server Called Icecast</h2>
+							<p>TAGS: software; Linux Ubuntu; Icecast radio server; Mixx DJ software
+							</p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							On a previous test, I had repurposed my old PC into something new (and hopefully useful); I
+							could only manage to get Ubuntu installed which seem to make the system run relatively well
+							(but not fast). I wanted to extend the repurposing of the PC, and build some experience with
+							Linux servers by trying to make an internet radio server on the PC. I heard about Icecast, a
+							free internet server system, so decided to install it and use free Mixx DJ software to
+							broadcast music (I could also just copy songs to a folder readable by Icecast but I just
+							chose this route).
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Trying-An-Internet-Radio-Server\internet_radio_2.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The Mixx DJ program using the Icecast server address/port as a live output.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Old PC (to host server); Linux Ubuntu; Icecast radio server; Mixx DJ software;
+							Cloudflare tunneling service</p>
+						<p>
+							I followed Kurt Edelbrock’s and Vultr’s tutorials which were to basically just use a Linux
+							command line install of icecast onto my old host PC, then edit the Icecast configuration
+							files to configure the server address and port. I then used Cloudflare tunnelling to convert
+							those addresses to a DNS style website (radio.branhoy.com) so that I could access the server
+							from any browser or music playing app that allows for http entries. I also downloaded Mixx
+							DJing software to test out live music mixing and broadcasting (it was a program that was
+							already compatible with Icecast as an output medium), then tested the setup from my phone.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Trying-An-Internet-Radio-Server\internet_radio_3.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The Icecast server instance, where you can listen to current broadcasts, or change
+									settings (if you have administrative access).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Trying-An-Internet-Radio-Server\internet_radio_4.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Mixx's settings menu for output configuration.</i>
+							</p>
+						</div>
+
+
+						<span class="image featured"><img
+								src="articleAssets\Trying-An-Internet-Radio-Server\internet_radio_5.jpg" alt=""
+								style="margin-left:auto;margin-right:auto;width:550px;" /></span>
+						<div class="center">
+							<p><i>The broadcast on my phone via browser; I can also listen from the address via music
+									player app, like VLC.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned</h3>
+						<p>
+							Everything seemed work but my old PC is way too slow for basic tasks. The radio server setup
+							well and was able to broadcast songs, but because of the slow PC, it was choppy playing
+							(like even on the PC itself, if the PC was better I would assume the broadcasting would have
+							been fine); I think I might need to
+							recycle this computer as its uses are realizing to be none.<br>
+							This trial was just another test to play with servers and repurposing computers, so I don’t
+							know if I'd ever practically use this again, it might be easier to find some online free
+							server to hold my tracks, though if I ever wanted to do any live dj-ing, I could use this.
+
+						</p>
+
+						<h3>References</h3>
+						<p>
+							Kurt Edelbrock’s Icecast on Linux tutorial:
+							https://www.linux.com/news/broadcast-your-music-icecast/ <br>
+							Vultr’s Icecast on Ubuntu tutorial: https://docs.vultr.com/install-icecast-on-ubuntu-20-04
+							<br>
+							Mixx DJ software: https://mixxx.org/ <br>
+							Icecast internet broadcasting software: https://icecast.org/ <br>
+						</p>
+
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

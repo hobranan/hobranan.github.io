@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Converting my Android TV box into a Linux distro Armbian, then using it for a OpenMediaVault NAS Server -
+		Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Converting my Android TV box into a Linux distro Armbian, then using it for a
+								OpenMediaVault NAS Server</h2>
+							<p>TAGS: electronics; software; NAS network attached storage server; Android TV box; Linux
+								distro Armbian; OpenMediaVault
+							</p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							In a previous experience I had converted my useless Android TV box (used to make TVs into
+							pseudo-Smart TVs) into a Linux distro Armbian. The RK3318 Armbian distro could also download
+							an ‘armbian-config’ library package that allows quick integration of third part software
+							(from a predefined list), so I wanted to see what I could install to make use of the box.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Converting-Android-TV-Box-Into-Armbian-NAS-Server\armbian_NAS_1.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The OpenMediaVault homepage, viewable from a browser.</i>
+							</p>
+						</div>
+
+						<h3>Design Walkthrough</h3>
+						<p><b>Parts:</b> Android TV box, with RK3318 Armbian Linux distro installed; ‘armbian-config’
+							list of third party software (including OpenMediaVault)</p>
+
+						<p>I have used Home Assistant before, but I heard OpenHAB is a light alternative to it and it
+							was on the ‘armbian-config’ list, so I tried to install that. Unfortunately, it wouldn’t
+							respond to any commands after installing (I could access OpenHAB CLI commands, but they
+							always resulted in errors), so I next tried to install OpenMediaVault. The OpenMediaVault
+							package was working, so I used Hauke’s OpenMediaVault tutorial to setup a local NAS system
+							where I could share files between my devices.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Converting-Android-TV-Box-Into-Armbian-NAS-Server\armbian_NAS_2.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The Android TV box, loaded with the RK3318 Armbian distro and a 'tester' USB 'NAS'
+									storage device.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Converting-Android-TV-Box-Into-Armbian-NAS-Server\armbian_NAS_3.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>RK3318 Armbian Linux distro CLI, that also has OpenMediaVault installed.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Converting-Android-TV-Box-Into-Armbian-NAS-Server\armbian_NAS_4.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>‘armbian-config’ package's list of third party software; I wanted to try OpenHAB, but
+									it wasn't working, so I went with OpenMediaVault.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Converting-Android-TV-Box-Into-Armbian-NAS-Server\armbian_NAS_5.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The NAS shared folder accessible from my Windows computer.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets\Converting-Android-TV-Box-Into-Armbian-NAS-Server\armbian_NAS_6.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;" /></span>
+						<div class="center">
+							<p><i>The NAS shared folder accessible from my smartphone, via server address.</i>
+							</p>
+						</div>
+
+						<h3>Lessons Learned</h3>
+						<p>
+							OpenMediaVault installed and worked well; I could share pictures, videos, songs across my
+							devices; But like previous experiences, I found that my need for a media server was
+							unnecessary (I have so many other things that do that already); so much like my old Vista
+							PC, I’m finding that my potential uses for this Android TV box is dwindling; But again, as
+							previously mentioned on previous experiences, I’m glad I was able to tinker with the devices
+							just to gain electronics and servers experience. Maybe I’ll find another use for it in the
+							future
+							using one of the other software packages on the ‘armbian-config’ list.
+						</p>
+
+						<h3>References</h3>
+						<p>HyperHDR’s Android TV box conversion tutorial:
+							https://www.hyperhdr.eu/2022/01/tv-box-mania-i-part-x88-pro-10.html <br>
+							Hauke’s OpenMediaVault tutorial: https://www.youtube.com/watch?v=Y3yF1Rsu7ow
+						</p>
+
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

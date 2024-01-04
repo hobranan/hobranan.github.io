@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Nightmare electronics: Hard bricking my
+		Android TV box then spending days to finally get it re-flashed alive. - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em>CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Nightmare electronics: Hard bricking my Android TV box then spending days to finally get
+								it re-flashed alive.</h2>
+							<p>TAGS: electronics; software; Linux Armbian Debian; RK3318 Android TV box; un-bricking; factory firmware flashing; maskrom boot mode;
+							</p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>
+							I had an Android TV box that was previously used to turn my old TV into a smart TV (with
+							internet access and external hard drive access), but I had bought a cheap TV that had smart
+							capabilities, and this box was slow and always ran hot, so it was pretty much useless as is.
+							I wanted to see if I could test my electronics skills by repurposing this android box with
+							something new. I found online that some people built a Linux distro specifically for these
+							ARM based systems, called Armbian (based on Debian), and, further, made a sub-distro for
+							these Android TV boxes, called RK3318 Box (the chipset that I have).<br><br>
+							I was able to install the system quite easily following the tutorial, and it dramatically
+							reduced the temperature of the chip (before it was scalding hot), but I wanted to see if I
+							could then install a Lakka gaming OS firmware; but something went wrong with the install and
+							my box became totally unresponsive (bricked). I spent the next few days going over tutorials
+							and forums of people who have unbricked these before by using factory firmware tools (with
+							an unconventional USB A male to male cord), and grounding some of the board’s terminals, in
+							order to get the board into maskrom mode, in which then its able to be communicated with and
+							flashed with factory firmware. The factory firmware then allows a jumping point for which I
+							can then flash the system via USB sticks of preload firmware of custom Linux
+							software.<br><br>
+							With a lot of patience, I finally got it to connect and flash, after which I pledged to not
+							attempt that Lakka install again, but instead try something else.
+						</p>
+						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_1.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;" /></span>
+						<div class="center">
+							<p><i>An Android TV box, repurposed as a linux distro board.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_2.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;" /></span>
+						<div class="center">
+							<p><i>The RK3318 custom Armbian distro, made specifically for this TV box chipset.</i>
+							</p>
+						</div>
+
+
+						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_3.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;" /></span>
+						<div class="center">
+							<p><i>The factory firmware flashing tool, with a happy green symbol, indicating it was connected and flashed successfully.</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_4.jpg"
+								alt="" style="margin-left:auto;margin-right:auto;width:550px;" /></span>
+						<div class="center">
+							<p><i>The board's grounding points used to short the clock (I think?) so the board goes into maskrom mode, to be ready for firmware input.</i>
+							</p>
+						</div>
+
+
+						<h3>Lessons Learned</h3>
+						<p>
+							<b>Was it worth it?</b>
+							Probably not, but I
+							suppose it felt good to triumph over adversity and repurpose a useless board. I think this
+							experience taught me that with electronics there is usually always a way to unbrick them,
+							and got me to experience the electronics systems at different levels of abstraction (first
+							at OS/programing level, to then architectural/hardware level). The board is only worth like
+							$40 bucks, so I don’t think I would spend much further time on it if it failed; it was
+							really just a ‘can I fix it’ trial; I suppose this trial helped me think about the
+							importance of researching good ‘all around compatible’ boards so that repurposing them in
+							the future is easier.
+						</p>
+
+						<h3>References</h3>
+						<p>HyperHDR’s tutorial: https://www.hyperhdr.eu/2022/01/tv-box-mania-i-part-x88-pro-10.html <br>
+							Forum with similar remedy for connecting (I cannot find the picture I got mine from anymore): 
+							https://forum.armbian.com/topic/30793-h96-max-rk3318-android-10/ <br>
+							Factory Tool demo: https://apkintvbox.com/how-to-unbrick-fix-h96-max-rk3318-4k-android-tv-box/ 
+							
+						</p>
+
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
