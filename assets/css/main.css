@@ -21,12 +21,14 @@
 	--color13: #0400ff;
 	--color14: #ffffff;
 	--color15: #ffffff;
-	/* backup palette - calm green */
+	/* backup palette - calm green, black font */
 	--color16: #05386b;
 	--color17: #379683;
 	--color18: #5cdb95;
-	--color19: #8ee4af;
-	--color20: #edf5e1;
+	--color19: #ffffff;
+	--color20: #c2c2c2;
+	/* backup palette - slick blue, white font */
+	--color21: #232943;
 }
 
 /* Added to center the mp4 video inputs */
