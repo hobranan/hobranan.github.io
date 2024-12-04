@@ -69,6 +69,32 @@
 							articles to take directions from; instead, I have left references to those articles at the
 							end.)</p>
 					</header>
+					<!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
+										<!-- Article//// -->
+					<!-- CTA -->
+					<section id="cta" class="wrapper style3">
+						<div class="container">
+						</div>
+					</section>
+					<article>
+						<header>
+							<h2><a href="Reflection-PLC-Training-NAIT.html">Reflecting on PLC Training at NAIT: Earning my credentials of PLC Ladder Logic Programming and PLC Advanced Programming.</a></h2>
+							<p>TAGS: electronics; automation; industrial; PLC;
+							</p>
+						</header>
+						<h3>Why I Did This</h3>
+						<p>
+							One of the possible careers paths I wanted to branch into was Automation. I had previous history with industrial operations, 
+							so using industrial automation controls (dubbed Operational Technology) and using PLC (programmable logic controllers) systems; 
+							but less familiar with the programming side of it (I only 'heard' of Ladder logic and function block programming). <br>
+							NAIT offered courses in PLC programming, and I wanted to learn more about it. I took the PLC Ladder Logic Programming and PLC Advanced Programming courses
+							where I learned to program in the different IEC 61131-3 languages (Ladder Logic, Function Block Diagram, Structured Text, Sequential Function Chart, 
+							but not Instruction List as lots of companies consider it too archaic). I also learned to program Allen Bradley CompactLogix PLCs using the RSLogix 500 and Studio 5000 software.
+						
+						</p>
+						<span class="image featured"><img
+								src="articleAssets/Reflection-PLC-Training-NAIT/CompactLogix.png" alt="" /></span>
+					</article>
 
 
 					<!-- Article//// -->
@@ -79,22 +105,35 @@
 					</section>
 					<article>
 						<header>
-							<h2><a href="Arduino-Indoor-Garden-Box-with-Data-Logger.html">Arduino Indoor Garden Box with
-									Data Logger</a></h2>
-							<p>TAGS: electronics; software; nature projects; Arduino Uno; data logger shield; real time
-								clock; relay; water pump; DC motor fan; </p>
+							<h2><a href="Unbricking-My-Android-TV-Box.html">Nightmare electronics: Hard bricking my
+									Android TV box then spending days to finally get it re-flashed alive.</a></h2>
+							<p>TAGS: electronics; software; Linux Armbian Debian; RK3318 Android TV box; un-bricking;
+								factory firmware flashing; maskrom boot mode;
+							</p>
 						</header>
 						<h3>Why I Did This</h3>
 						<p>
-							One of my passions is with nature related automation (because I like growing food plants and
-							I love the idea of them being cared for through automation).
-							Normally I can achieve this with minimal equipment (like a bubbler alone), but I have an
-							Arduino, lots of sensors, and data logger shield; and, as an engineer,
-							I figured this would be a perfect project for testing all of this equipment.
+							I had an Android TV box that was previously used to turn my old TV into a smart TV (with
+							internet access and external hard drive access), but I had bought a cheap TV that had smart
+							capabilities, and this box was slow and always ran hot, so it was pretty much useless as is.
+							I wanted to see if I could test my electronics skills by repurposing this Android box with
+							something new. I found online that some people built a Linux distro specifically for these
+							ARM based systems, called Armbian (based on Debian), and, further, made a sub-distro for
+							these Android TV boxes, called RK3318 Box (the chipset that I have).<br><br>
+							I was able to install the system quite easily following the tutorial, and it dramatically
+							reduced the temperature of the chip (before it was scalding hot), but I wanted to see if I
+							could then install a Lakka gaming OS firmware; but something went wrong with the install and
+							my box became totally unresponsive (bricked). I spent the next few days going over tutorials
+							and forums of people who have unbricked these before by using factory firmware tools (with
+							an unconventional USB A male to male cord), and grounding some of the board’s terminals, in
+							order to get the board into maskrom mode, in which then its able to be communicated with and
+							flashed with factory firmware. The factory firmware then allows a jumping point for which I
+							can then flash the system via USB sticks of preload firmware of custom Linux
+							software.<br><br>
+							With a lot of patience, I finally got it to connect and flash, after which I pledged to not
+							attempt that Lakka install again, but instead try something else.
 						</p>
-
-						<span class="image featured"><img
-								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_40.jpg"
+						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_1.jpg"
 								alt="" /></span>
 					</article>
 
@@ -153,36 +192,7 @@
 								src="articleAssets\Winning-APIC-2023-Energy-Hackathon\APIC-2023_1.jpg" alt="" /></span>
 					</article>
 
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Arduino-Weather-Station-Anemometer-Engg-Course.html">Arduino Weather Station,
-									with Anemometer, Built for
-									an Engineering Course</a></h2>
-							<p>TAGS: electronics; software; nature projects; Arduino; DHT22; Anemometer; Rotary Encoder;
-								3D modeling; 3D printing; product reporting </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>
-							It was the project of one of my engineering courses where the focus was to learn some
-							Arduino electronics building
-							and to learn how to brainstorm and report projects (for imaginary customers). We were tasked
-							with building a wind
-							speed sensor (turbine) using a rotary encoder and Arduino, plus 2 additional sensors of our
-							choice. I was able to
-							build on my Fusion 360 3D modeling and printing skills by printing some wind blades and
-							housings. Finally, we had
-							to summarize our project into a report PDF.
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Arduino-Weather-Station-Anemometer-Engg-Course\engg160project_1.jpg"
-								alt="" /></span>
-					</article>
+
 
 					<!-- Article//// -->
 					<!-- CTA -->
@@ -322,6 +332,35 @@
 					</article>
 
 
+
+
+										<!-- Article//// -->
+					<!-- CTA -->
+					<section id="cta" class="wrapper style3">
+						<div class="container">
+						</div>
+					</section>
+					<article>
+						<header>
+							<h2><a href="Arduino-Indoor-Garden-Box-with-Data-Logger.html">Arduino Indoor Garden Box with
+									Data Logger</a></h2>
+							<p>TAGS: electronics; software; nature projects; Arduino Uno; data logger shield; real time
+								clock; relay; water pump; DC motor fan; </p>
+						</header>
+						<h3>Why I Did This</h3>
+						<p>
+							One of my passions is with nature related automation (because I like growing food plants and
+							I love the idea of them being cared for through automation).
+							Normally I can achieve this with minimal equipment (like a bubbler alone), but I have an
+							Arduino, lots of sensors, and data logger shield; and, as an engineer,
+							I figured this would be a perfect project for testing all of this equipment.
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_40.jpg"
+								alt="" /></span>
+					</article>
+
 					<!-- Article//// -->
 					<!-- CTA -->
 					<section id="cta" class="wrapper style3">
@@ -330,39 +369,30 @@
 					</section>
 					<article>
 						<header>
-							<h2><a href="Unbricking-My-Android-TV-Box.html">Nightmare electronics: Hard bricking my
-									Android TV box then spending days to finally get it re-flashed alive.</a></h2>
-							<p>TAGS: electronics; software; Linux Armbian Debian; RK3318 Android TV box; un-bricking;
-								factory firmware flashing; maskrom boot mode;
-							</p>
+							<h2><a href="Arduino-Weather-Station-Anemometer-Engg-Course.html">Arduino Weather Station,
+									with Anemometer, Built for
+									an Engineering Course</a></h2>
+							<p>TAGS: electronics; software; nature projects; Arduino; DHT22; Anemometer; Rotary Encoder;
+								3D modeling; 3D printing; product reporting </p>
 						</header>
 						<h3>Why I Did This</h3>
 						<p>
-							I had an Android TV box that was previously used to turn my old TV into a smart TV (with
-							internet access and external hard drive access), but I had bought a cheap TV that had smart
-							capabilities, and this box was slow and always ran hot, so it was pretty much useless as is.
-							I wanted to see if I could test my electronics skills by repurposing this Android box with
-							something new. I found online that some people built a Linux distro specifically for these
-							ARM based systems, called Armbian (based on Debian), and, further, made a sub-distro for
-							these Android TV boxes, called RK3318 Box (the chipset that I have).<br><br>
-							I was able to install the system quite easily following the tutorial, and it dramatically
-							reduced the temperature of the chip (before it was scalding hot), but I wanted to see if I
-							could then install a Lakka gaming OS firmware; but something went wrong with the install and
-							my box became totally unresponsive (bricked). I spent the next few days going over tutorials
-							and forums of people who have unbricked these before by using factory firmware tools (with
-							an unconventional USB A male to male cord), and grounding some of the board’s terminals, in
-							order to get the board into maskrom mode, in which then its able to be communicated with and
-							flashed with factory firmware. The factory firmware then allows a jumping point for which I
-							can then flash the system via USB sticks of preload firmware of custom Linux
-							software.<br><br>
-							With a lot of patience, I finally got it to connect and flash, after which I pledged to not
-							attempt that Lakka install again, but instead try something else.
+							It was the project of one of my engineering courses where the focus was to learn some
+							Arduino electronics building
+							and to learn how to brainstorm and report projects (for imaginary customers). We were tasked
+							with building a wind
+							speed sensor (turbine) using a rotary encoder and Arduino, plus 2 additional sensors of our
+							choice. I was able to
+							build on my Fusion 360 3D modeling and printing skills by printing some wind blades and
+							housings. Finally, we had
+							to summarize our project into a report PDF.
 						</p>
-						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_1.jpg"
+						<span class="image featured"><img
+								src="articleAssets\Arduino-Weather-Station-Anemometer-Engg-Course\engg160project_1.jpg"
 								alt="" /></span>
 					</article>
 
-
+					<!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
 				</div>
 			</div>
 		</section>
