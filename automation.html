@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Featured - Brandon Hoynick's CV Profile</title>
+	<title>Automation - Brandon Hoynick's CV Profile</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -45,10 +45,10 @@
 									<li><a href="#">Veroeros feugiat</a></li>
 								</ul>
 							</li> -->
-							<li class="current"><a href="featured.html">Featured</a></li>
-							<li><a href="automation.html">Automation</a></li>
-							<li><a href="gamedev.html">Game Development</a></li>
-							<li><a href="archived.html">Archived</a></li>
+					<li ><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="automation.html">Automation</a></li>
+					<li><a href="gamedev.html">Game Development</a></li>
+					<li><a href="archived.html">Archived</a></li>
 				</ul>
 			</nav>
 
@@ -61,8 +61,8 @@
 
 					<!-- Content -->
 					<header>
-						<h2>Featured</h2>
-						<p>Let's see what I've experienced lately. [Click on the titles to see each article.]<br>
+						<h2>Automation</h2>
+						<p>Let's see what I've experienced with automation (Industrial; Operational Technology; PLC; SCADA). [Click on the titles to see each article.]<br>
 							{To see all my project experiences, go to the 'Archived' page.}<br>
 							(NOTE: These articles are personal records of what projects I have attempted. These are not
 							articles to take directions from; instead, I have left references to those articles at the
@@ -250,292 +250,26 @@
 					</section>
 					<article>
 						<header>
-							<h2><a href="Unbricking-My-Android-TV-Box.html">Nightmare electronics: Hard bricking my
-									Android TV box then spending days to finally get it re-flashed alive.</a></h2>
-							<p>TAGS: electronics; software; Linux Armbian Debian; RK3318 Android TV box; un-bricking;
-								factory firmware flashing; maskrom boot mode;
+							<h2><a href="Testing-OpenPLC-Devices.html">Testing OpenPLC Runtime on Raspberry Pi with Various Slave Devices</a></h2>
+							<p>TAGS: electronics; automation; industrial; PLC; OpenPLC; Raspberry Pi; Arduino; ESP;
+								Modbus;
 							</p>
 						</header>
 						<h3>Why I Did This</h3>
 						<p>
-							I had an Android TV box that was previously used to turn my old TV into a smart TV (with
-							internet access and external hard drive access), but I had bought a cheap TV that had smart
-							capabilities, and this box was slow and always ran hot, so it was pretty much useless as is.
-							I wanted to see if I could test my electronics skills by repurposing this Android box with
-							something new. I found online that some people built a Linux distro specifically for these
-							ARM based systems, called Armbian (based on Debian), and, further, made a sub-distro for
-							these Android TV boxes, called RK3318 Box (the chipset that I have).<br><br>
-							I was able to install the system quite easily following the tutorial, and it dramatically
-							reduced the temperature of the chip (before it was scalding hot), but I wanted to see if I
-							could then install a Lakka gaming OS firmware; but something went wrong with the install and
-							my box became totally unresponsive (bricked). I spent the next few days going over tutorials
-							and forums of people who have unbricked these before by using factory firmware tools (with
-							an unconventional USB A male to male cord), and grounding some of the board’s terminals, in
-							order to get the board into maskrom mode, in which then its able to be communicated with and
-							flashed with factory firmware. The factory firmware then allows a jumping point for which I
-							can then flash the system via USB sticks of preload firmware of custom Linux
-							software.<br><br>
-							With a lot of patience, I finally got it to connect and flash, after which I pledged to not
-							attempt that Lakka install again, but instead try something else.
+							In my pursuit to experience industrial automation and PLC programming, I wanted to test the
+							OpenPLC runtime on my Raspberry Pi. <br> I wanted to see how effective this runtime was and
+							how effective the ability to connect to slave devices was. OpenPLC allows users to install
+							the runtime (the PLC cycle) on a Raspberry Pi, but also can program Arduinos and ESP
+							microcontrollers to act as I/O extensions (giving the ability to connect more sensors
+							actuators, but also wireless connectivity), all apparently with the help of Modbus communication.
 						</p>
-						<span class="image featured"><img src="articleAssets\Unbricking-My-Android-TV-Box\unbrick_1.jpg"
+						<span class="image featured"><img src="articleAssets/Testing-OpenPLC-Devices/openplcpiandslavedevices3.png"
 								alt="" /></span>
 					</article>
 
 
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Testing-Cheap-Solar-And-Battery-Storage-System.html">Experimenting With My
-									Cheap 12V 50W Solar Storage System</a></h2>
-							<p>TAGS: electronics; nature projects; solar; 12V batteries; MPPT </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>I wanted to experience owning a solar storage system. I had the opportunity to receive
-							some
-							free 12V batteries, and I found a cheap basic maximum power point tracking (MPPT) solar
-							charge controller and 50W solar panel online.
-							The system totalled about $100. I also have a cheap 12V inverter (used in vehicles to
-							get a
-							120V AC supply).
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Testing-Cheap-Solar-And-Battery-Storage-System\Cheap-Solar-And-Battery-Storage_2.jpg"
-								alt="" /></span>
-					</article>
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Winning-APIC-2023-Energy-Hackathon.html">Competing In and Winning the
-									APIC's 2023 Energy Hackathon</a></h2>
-							<p>TAGS: software; hackathon; Alberta Power Industry Consortium </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>Hackathons are great place to: brainstorm project ideas; meet other innovators; get some
-							recognition and prize money. This hackathon was hosted at my university by the Alberta
-							Power
-							Industry Consortium, with the theme being centered around: Safety and Security for the
-							Smart
-							Grid, System Modelling and Artificial Intelligence for Power Systems, Grid Integration
-							of
-							Renewable and Distributed Energy, and Advanced Power Electronics for the Smart Grid. I
-							love
-							electrical-based projects so I figured this hackathon would be great for me.
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Winning-APIC-2023-Energy-Hackathon\APIC-2023_1.jpg" alt="" /></span>
-					</article>
-
-
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Website-Hosted-From-Raspberry-Pi.html">Hosting a Website From My Own Raspberry
-									Pi Using Nginx</a></h2>
-							<p>TAGS: electronics; software; website; Raspberry Pi; Nginx server; </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>I had a cheap Raspberry Pi 3B and learned they were capable of hosting web servers. I was
-							learning more about web servers and figured this would be a good pi project; additionally, I
-							figured this project might teach me more about the intricacies of non-cloud web servers.<br>
-							Cloud based web servers aren’t free (for the most part; you can get an exception to this by
-							using GitHub Pages, but apparently the level of service is limited); the costs arise from
-							the power and service time allocated from companies to have their computers serve the cloud
-							requests (think of it like charging for virtual parking and virtual valets of your website
-							or other internet services). To get around this (at least at the individual tinkerers’
-							level) you can host your own website on your own hardware.
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Website-Hosted-From-Raspberry-Pi\website-raspi-nginx_1.jpg"
-								alt="" /></span>
-					</article>
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Reflecting-On-Embedded-Systems-Concepts-With-FreeRTOS.html">Reflecting On
-									Embedded Systems Concepts
-									With Arduino And FreeRTOS</a></h2>
-							<p>TAGS: electronics; software; FreeRTOS; Arduino; nano; stepper motor; UART; </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>
-							In one of my university’s courses, we learned about real-time embedded systems.
-							Real-time
-							operating systems are systems that strive to complete tasks within hard time limits;
-							these
-							can be both scheduled and interrupt triggered tasks. They are important systems
-							because not
-							only do they express high performance with their ability to respond, but they are
-							suitable
-							for mission or safety critical systems (like vehicle accident black boxes, aircraft
-							systems,
-							medical devices).<br>
-							FreeRTOS is an example of a real-time operating system (it’s in the name). I learned
-							that
-							you could import the FreeRTOS library on the Arduino IDE, so I wanted to reflect on
-							the
-							concepts in learned in my course and how I could apply them to an Arduino
-							project.<br>
-							The main concepts our course focused on were: multi-tasking/concurrency and
-							priorities;
-							queue containers; UART and SPI communications; device control (motors with
-							opto-isolator,
-							displays, buttons, leds); hardware interrupts and polling;
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Reflecting-On-Embedded-Systems-Concepts-With-FreeRTOS\Reflecting-Embedded-FreeRTOS_1.jpg"
-								alt="" /></span>
-					</article>
-
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Android-Studio-App-QR-Code-Hunter.html">Building An Android Studio App
-									For QR Code Collecting</a></h2>
-
-							<p>TAGS: software; Android Studio; Android; smartphone; Google Firebase; Open Street
-								Maps;
-								GitHub</p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>Some of my engineering courses taught me about some fundamental concepts of software
-							engineering (through an object-oriented style using the Java language); In doing
-							this, I was
-							also guided on how to use Android Studio, a standard application for developing
-							Android
-							based apps using the Java language.<br>
-
-							Here I will go over the application my team and I built called QR Hunter, an app for
-							translating any QR or bar codes you find with your smartphone camera.
-						</p>
-
-						<span class="image featured"><img
-								src="articleAssets\Android-Studio-App-QR-Code-Hunter\QR-Code-Hunter_0.jpg"
-								alt="" /></span>
-					</article>
-
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Unity-UAlberta-AR-App-Dev.html">My Experience With Using Unity To
-									Develop Scenes In UAlberta's AR App</a></h2>
-							<p>TAGS: software; Unity; University of Alberta; Augmented Reality; smartphone </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p> I had the opportunity to work with some fine people on the University of
-							Alberta’s
-							Augmented Reality app called “UAlberta AR”. The app showcases many engineering
-							course
-							concepts that students and teachers can use as an aid in visualizing/ experiencing
-							said
-							concepts. It was a great experience to develop my Unity skills but also develop team
-							collaborations skills especially with DevOp style git version control (we had our
-							project on
-							a git repo and used Unity’s Continuous Integration checker to check our updates
-							everything we made a
-							revision to
-							the app). We also followed a sprint team review style when setting project goals.
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Unity-UAlberta-AR-App-Dev\Unity-UAlberta-AR_2.jpg" alt=""
-								style="margin-left:auto; margin-right:auto; width:400px;" /></span>
-					</article>
-
-
-
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Arduino-Indoor-Garden-Box-with-Data-Logger.html">Arduino Indoor Garden Box with
-									Data Logger</a></h2>
-							<p>TAGS: electronics; software; nature projects; Arduino Uno; data logger shield; real time
-								clock; relay; water pump; DC motor fan; </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>
-							One of my passions is with nature related automation (because I like growing food plants and
-							I love the idea of them being cared for through automation).
-							Normally I can achieve this with minimal equipment (like a bubbler alone), but I have an
-							Arduino, lots of sensors, and data logger shield; and, as an engineer,
-							I figured this would be a perfect project for testing all of this equipment.
-						</p>
-
-						<span class="image featured"><img
-								src="articleAssets\Arduino-Indoor-Garden-Box-with-Data-Logger\Indoor-Garden-Box_40.jpg"
-								alt="" /></span>
-					</article>
-
-					<!-- Article//// -->
-					<!-- CTA -->
-					<section id="cta" class="wrapper style3">
-						<div class="container">
-						</div>
-					</section>
-					<article>
-						<header>
-							<h2><a href="Arduino-Weather-Station-Anemometer-Engg-Course.html">Arduino Weather Station,
-									with Anemometer, Built for
-									an Engineering Course</a></h2>
-							<p>TAGS: electronics; software; nature projects; Arduino; DHT22; Anemometer; Rotary Encoder;
-								3D modeling; 3D printing; product reporting </p>
-						</header>
-						<h3>Why I Did This</h3>
-						<p>
-							It was the project of one of my engineering courses where the focus was to learn some
-							Arduino electronics building
-							and to learn how to brainstorm and report projects (for imaginary customers). We were tasked
-							with building a wind
-							speed sensor (turbine) using a rotary encoder and Arduino, plus 2 additional sensors of our
-							choice. I was able to
-							build on my Fusion 360 3D modeling and printing skills by printing some wind blades and
-							housings. Finally, we had
-							to summarize our project into a report PDF.
-						</p>
-						<span class="image featured"><img
-								src="articleAssets\Arduino-Weather-Station-Anemometer-Engg-Course\engg160project_1.jpg"
-								alt="" /></span>
-					</article>
+					
 
 					<!-- ///////////////////////////////////////////////////////////////////////////////////////// -->
 				</div>

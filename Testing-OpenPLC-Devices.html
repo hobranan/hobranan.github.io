@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<!--
+	Arcana by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Testing OpenPLC on Various Devices - Brandon Hoynick's CV Profile</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<div id="header">
+
+			<!-- Logo -->
+			<h1><a href="index.html" id="logo">Brandon Hoynick <em> CV Profile</em></a></h1>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="featured.html">Featured</a></li>
+					<li class="current"><a href="archived.html">Archived</a></li>
+				</ul>
+			</nav>
+
+		</div>
+
+		<!-- Main -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div id="content">
+
+
+					<article>
+						<header>
+							<h2>Testing OpenPLC Runtime on Raspberry Pi with Various Slave Devices</h2>
+							<p>TAGS: electronics; automation; industrial; PLC; OpenPLC; Raspberry Pi; Arduino; ESP;
+								Modbus </p>
+						</header>
+
+						<h3>Why I Did This</h3>
+						<p>In my pursuit to experience industrial automation and PLC programming, I wanted to test the
+							OpenPLC runtime on my Raspberry Pi. <br> I wanted to see how effective this runtime was and
+							how effective the ability to connect to slave devices was. OpenPLC allows users to install
+							the runtime (the PLC cycle) on a Raspberry Pi, but also can program Arduinos and ESP
+							microcontrollers to act as I/O extensions (giving the ability to connect more sensors
+							actuators, but also wireless connectivity), all apparently with the help of Modbus
+							communication.
+
+						</p>
+
+						<h3>Description</h3>
+						<p><b>Parts:</b> raspberry pi; esp8266; arduino uno; </p>
+						<p>
+							- Here I tested the open source OpenPLC runtime (a free PLC system to install on your
+							Raspberry Pi) to see how well it performs on my Pi. <br>
+							- The runtime can use your Pi's GPIOs to control a multitude of digital and analog devices.
+							<br>
+							- The runtime receives IEC programs (like Ladder Logic or Function Block Diagrams) from a
+							free Editor program (by the same people). <br>
+							- The runtime can extend its GPIOs to include additional devices (slaves) from other cheap
+							microcontrollers like ESPs and Arduinos. <br>
+						</p>
+
+						<span class="image featured"><img
+								src="articleAssets/Testing-OpenPLC-Devices/openplcpiandslavedevices3.png"
+								alt="" /></span>
+						<div class="center">
+							<p><i>A user can combine multiple microcontrollers to link with a raspberry pi so that you
+									have a large scale (and possibly wireless) I/O system. The runtime webpage interface
+									(Left) allows you to add those slave deivces which take on specific modbus addresses
+									correlating to the to the device's digital and analogs I/Os (starting from
+									addressing 100).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets/Testing-OpenPLC-Devices/openplcpiandslavedevices4.png"
+								alt="" /></span>
+						<div class="center">
+							<p><i>The device's digital and analogs I/Os translate to the physical pin locations (so pin2
+									might be address %IX100.0).</i>
+							</p>
+						</div>
+
+						<span class="image featured"><img
+								src="articleAssets/Testing-OpenPLC-Devices/openplcpiandslavedevices2.png"
+								alt="" /></span>
+						<div class="center">
+							<p><i>These I/O addresses are used in the editor to signify variables to represent the I/Os
+									and the logic. In this test, the slaves devices are upload with a "Blank" slave
+									program;
+									while the main raspberry pi is uploaded with this function block diagram of
+									heartbeat logic (blinking to show the program is running and not stuck) and a set of
+									on/off switches to control some leds and a fan.</i>
+							</p>
+						</div>
+
+						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
+							<iframe id="ytplayer" type="text/html"
+								src="https://www.youtube.com/embed/7ElhbZHgGIo?&mute=0" frameborder="0"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen>
+							</iframe>
+
+						</div>
+						<p><i>Here in this video I'm demoing the raspberry pi controlling the buttons and LEDs, while a
+								serial slave device (Arduino Uno) controls a relay block for the 12V fan. Both the
+								raspberry
+								pi and uno have red LEDs doing a blinking/heartbeat signal. Additionally,
+								I have a wireless ESP8266 microcontroller actively recieving a heartbeat signal
+								(blinking red LED)
+								from the raspberry pi; the Uno and ESP8266 works solely from slave command of the
+								raspberry pi runtime, as you will see in the next video, when I disable the pi, it
+								disables the Uno's and ESP8266's command.</i>
+						</p>
+
+
+						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
+							<iframe id="ytplayer" type="text/html"
+								src="https://www.youtube.com/embed/YZgqfL6_0Ag?&mute=0" frameborder="0"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen>
+							</iframe>
+
+						</div>
+						<p><i>Here I unplug the raspberry pi, disabling the runtime, which then disables the Uno's and
+								ESP8266's
+								blinking command (the Uno is less apparent because it also receives power from the PI,
+								but the ESP8266 is on separate power and only recieves commands from the Pi).</i>
+						</p>
+
+						<!-- <span class="image featured"><img
+								src="articleAssets\Touring-Scotford-Solar-Farm\Group_photo_Scotford_tour.jpg"
+								alt="" /></span>
+						<div class="center">
+							<p><i>Our fellow attendees (some are: project employees, RED members, another UofA
+									electrical engineering student club, personal contractors, and WIRE members); I'm fifth from the left
+									side. Also, some actual panels used on the farm.</i>
+							</p>
+						</div> -->
+
+						<h3>References</h3>
+						<p>
+							OpenPLC Editor: <a href="https://autonomylogic.com/docs/3-1-openplc-editor-overview/"
+								target="_blank">https://autonomylogic.com/docs/3-1-openplc-editor-overview/</a>
+							<br>
+							OpenPLC Runtime: <a href="https://autonomylogic.com/docs/2-1-openplc-runtime-overview/"
+								target="_blank">https://autonomylogic.com/docs/2-1-openplc-runtime-overview/</a>
+							<br>
+							OpenPLC Slave Device setup: <a href="https://autonomylogic.com/docs/2-6-slave-devices/"
+								target="_blank">https://autonomylogic.com/docs/2-6-slave-devices/</a>
+							<br>
+							OpenPLC Addressing: <a href="https://autonomylogic.com/docs/2-4-physical-addressing/"
+								target="_blank">https://autonomylogic.com/docs/2-4-physical-addressing/</a>
+							<br>
+						</p>
+					</article>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- Main pages (since mobile puts them in hamburger menu, this set of links is more open) -->
+		<section class="wrapper style1">
+			<div class="container">
+				<div class="row gtr-200">
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-home"></i>
+							<h3><a href="index.html">Home Page</a></h3>
+							<p>Let's go to the start page. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-star"></i>
+							<h3><a href="featured.html">Featured Articles</a></h3>
+							<p>Let's see what I've experienced lately. <br> </p>
+						</div>
+					</section>
+					<section class="col-4 col-12-narrower">
+						<div class="box highlight">
+							<i class="icon solid major fa-warehouse"></i>
+							<h3><a href="archived.html">Archived Articles</a></h3>
+							<p>Let's see ALL of what I've experienced. <br> </p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA -->
+		<section id="cta" class="wrapper style3">
+			<div class="container">
+				<!-- Icons -->
+				<ul class="icons">
+					<li><a href="https://github.com/hobranan/" target="_blank" class="icon brands fa-github"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.linkedin.com/in/brandon-h-abca/" target="_blank"
+							class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.youtube.com/channel/UCl-9B-M4xnpTyTeQCUQTFig/videos" target="_blank"
+							class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</div>
+		</section>
+
+
+		<!-- Footer -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+				</div>
+			</div>
+
+
+			<!-- Copyright -->
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Brandon Hoynick. All rights reserved.</li>
+					<li>Webpage Template from: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
+					<li>Free photos from: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.dropotron.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
