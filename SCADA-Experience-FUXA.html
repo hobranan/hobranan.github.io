@@ -7,7 +7,7 @@
 <html>
 
 <head>
-	<title>Testing a PLC attachment for the Arduino Nano - Brandon Hoynick's CV Profile</title>
+	<title>Testing FUXA, open source SCADA software - Brandon Hoynick's CV Profile</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -41,82 +41,91 @@
 
 					<article>
 						<header>
-							<h2>Testing a PLC attachment (Canaduino PLC 100) for the Arduino Nano, and programming with
-								OpenPLC</h2>
-							<p>TAGS: electronics; soldering; automation; industrial; PLC; OpenPLC; Arduino Nano;
-								Canaduino PLC 100 </p>
+							<h2>
+								Testing FUXA, open source SCADA software with: Modbus communications, HMI drawing,
+								SQLite database and trend charts, Alarm tracking; testing on two PLCs
+							</h2>
+							<p>
+								TAGS: electronics; soldering; automation; industrial; PLC; OpenPLC; Arduino Uno and
+								Nano;
+								Canaduino PLC 100; raspberry pi; Modbus; SCADA; FUXA; HMI; alarms; historian; charts;
+								SQLite
+							</p>
 						</header>
 
 						<h3>Why I Did This</h3>
-						<p>While scouting online for cheap physical PLC options, I found the Canaduino PLC 100 on
-							Amazon.
-							It's a small board (about $30) that I had to solder myself and can
-							attach to an Arduino Nano. It contains ruggedized inputs and outputs at higher
-							voltages than what the Nano natively supplies, like
-							6 relay digital outputs with optoisolators; 4 digital inputs that can handle 3.3 - 24V; 4
-							analog inputs and 4 analog outputs that can both track in ranges between 0 - 10 V (very
-							similar to what many professional PLCs can do);
-							onboard LEDs for digital state notification; and 5V and 10V supply lines.<br>
-							More importantly, it can be programmed with free Arduino IDE or the free OpenPLC editor and
-							runtime.<br>
-							In this video, I showcase the board demonstrating its power with a makeshift 'water heater
-							and humidifer plant'. </p>
-						</p>
-
-						<span class="image featured"><img
-								src="articleAssets/OpenPLC-CanaduinoPLC100/canaduinoplc100_waterheaterhumidifier.png"
-								alt="" /></span>
-						<div class="center">
-							<p><i>Canaduino PLC 100 board, with Arduino nano, programmed from OpenPLC.</i>
-							</p>
-						</div>
-
-						<h3>Description</h3>
-						<!-- <p><b>Parts:</b> plotly software</p> -->
-
 						<p>
-							In the first video (the physical demo), I go through the board's features and how all the
-							sensors and actuators work to control a water heater and humidifier plant. The second video
-							is a
-							quick demo of the OpenPLC editor and runtime, showing how I programmed the board to
-							do the different state actions for the plant.
+							In my pursuit of industrial automation knowledge, I wanted to see what open source SCADA
+							software was suitable for learning, practicing, and using with my previous automation setups
+							(PLCs). SCADA is 'Supervisory Control And Data Acquisition', and it's software that
+							acts to oversee multiple PLCs, DCSs, RTUs, by: giving visual representations of the plants
+							(Human Machine
+							Interface, HMI) that can also be used to send control commands, collect alarms, capture
+							all tag data into databases (like SQLite) and retrieve that data into a time-series chart
+							(historian), and creating scripts for producing new conditions and actions from combined PLC
+							conditions (like PLC1 can affect PLC2, or, PLC1 and PLC2 at specific conditions can together
+							cause a new state); this all together increases the overall power a user can have with
+							multiple automation systems, therefore, it is a valuable tool to learn.
 						</p>
 
-						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
-							<iframe id="ytplayer" type="text/html"
-								src="https://www.youtube.com/embed/aeSGdTttCco?&mute=0" frameborder="0"
-								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen>
-							</iframe>
-						</div>
-
-						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
-							<iframe id="ytplayer" type="text/html"
-								src="https://www.youtube.com/embed/N5HHcXgAWxQ?&mute=0" frameborder="0"
-								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen>
-							</iframe>
-						</div>
-
-						<!-- <span class="image featured"><img
-								src="articleAssets\Touring-Scotford-Solar-Farm\Group_photo_Scotford_tour.jpg"
+						<span class="image featured"><img src="articleAssets\SCADA-Experience-FUXA\scadahierarchy.png"
 								alt="" /></span>
 						<div class="center">
-							<p><i>Our fellow attendees (some are: project employees, RED members, another UofA
-									electrical engineering student club, personal contractors, and WIRE members); I'm fifth from the left
-									side. Also, some actual panels used on the farm.</i>
+							<p><i>The generic SCADA experience is at a supervisory level above the PLCs and field
+									devices (sensors,
+									actuators), many companies will describe it as even higher {just Google 'SCADA
+									hierarchy'}; I may explore these higher levels later, but for now my goal is to
+									explore HMI's, alarm pages, databases and charts, scripting, for these small PLCs
+									setups.</i>
 							</p>
-						</div> -->
+						</div>
+
+						<h3>Experience Rundown</h3>
+						<!-- <p><b>Parts:</b> computer (for holding OpenPLC runtime and FUXA); test hardware (Arduino and
+							sensors and actuators); camera (for remote viewing) </p> -->
+						<p>
+							In this video, I demo the FUXA SCADA software on a server, showcasing the connections, tags,
+							HMI, alarms, data charts, and custom scripts, for an interaction between two PLC setups each on
+							different servers.
+							They are both OpenPLC runtimes, with one being on a Raspberry Pi and the other on a Windows
+							Laptop.
+							The Raspberry Pi is connected to an Arduino Uno with a few sensors, but Laptop is connected
+							to the previously demoed Canaduino PLC 100 'water heater and humidifier' setup (see the
+							previous article "<a href="OpenPLC-CanaduinoPLC100-Demo.html">Testing a PLC attachment
+								(Canaduino PLC 100)
+								for the Arduino Nano, and programming with
+								OpenPLC</a>" for detailed demo of that PLC alone).<br>
+							*This is a long video (~21 minutes), so if you feel I'm demoing slow, then feel free to
+							speed up the youtube playback speed.<br>
+							*Also, this was a long project to make, dictate, and capture with two cameras, so I
+							apologize if I miss anything to be explained; I will try to append this article
+							with extra pieces to explain anything I may have missed in the video.
+
+						</p>
+
+
+						<div style="position: relative; overflow: hidden; padding-bottom: 56.25%;">
+							<iframe id="ytplayer" type="text/html"
+								src="https://www.youtube.com/embed/XrIhSI871q0?&mute=0" frameborder="0"
+								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen>
+							</iframe>
+
+						</div>
+
+						<!-- show pictures of scripts and notifications, since video was too small -->
 
 						<h3>References</h3>
 						<p>
-							CANADUINO PLC MEGA328 PLC-100 DIY Kit V2 (for Arduino Nano): <a
-								href="https://www.universal-solder.ca/product/canaduino-plc-100-v2-for-arduino-nano/"
-								target="_blank">https://www.universal-solder.ca/product/canaduino-plc-100-v2-for-arduino-nano/</a>
+							FUXA on GitHub: <a href="https://github.com/frangoteam/FUXA"
+								target="_blank">https://github.com/frangoteam/FUXA</a>
 							<br>
-							OpenPLC Editor: <a href="https://autonomylogic.com/docs/3-1-openplc-editor-overview/"
-								target="_blank">https://autonomylogic.com/docs/3-1-openplc-editor-overview/</a>
+							OpenPLC Modbus addressing setup: <a
+								href="https://autonomylogic.com/docs/2-5-modbus-addressing/"
+								target="_blank">https://autonomylogic.com/docs/2-5-modbus-addressing/</a>
 							<br>
 							OpenPLC Runtime: <a href="https://autonomylogic.com/docs/2-1-openplc-runtime-overview/"
 								target="_blank">https://autonomylogic.com/docs/2-1-openplc-runtime-overview/</a>
+							<br>
 						</p>
 					</article>
 
